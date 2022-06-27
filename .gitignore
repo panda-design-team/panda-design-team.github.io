@@ -1,0 +1,39 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# debug ignore
+/output
+/dist
+/test
+/dll
+
+# FE ignore
+node_modules
+bower_components
+
+# testing
+/coverage
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+# IDE ignore
+.idea
+.vscode
+.node_repl_history
+*.iml
+stats.json
+/timestamp.txt
+.eslintcache
+/session
+# VSCODE 配置文件
+jsconfig.json
+
+*.zip
+
+# 脚本产出
+scripts/parse.json
+reskript.config.bundled_*.mjs

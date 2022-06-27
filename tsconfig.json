@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es2018",
+        "noEmit": true,
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "allowJs": false,
+        "isolatedModules": true,
+        "skipLibCheck": true,
+        "removeComments": true,
+        // syntax checks
+        "jsx": "preserve",
+        "esModuleInterop": true,
+        "experimentalDecorators": false,
+        "keyofStringsOnly": true,
+        // linter checks
+        "strict": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": false,
+        "noUncheckedIndexedAccess": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "useUnknownInCatchVariables": false
+    },
+    "include": [
+        "src",
+        "scripts",
+        "*.ts"
+    ]
+}
