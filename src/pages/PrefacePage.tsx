@@ -1,7 +1,6 @@
 import {Page} from '@/components';
 
 export const PrefacePage = () => {
-    /* eslint-disable max-len */
     return (
         <Page title="Preface 前言">
             <div>
@@ -13,5 +12,4 @@ export const PrefacePage = () => {
             </div>
         </Page>
     );
-    /* eslint-enable max-len */
 };

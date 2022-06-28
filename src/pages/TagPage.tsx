@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
-import Tag from '@/panda-design/tag';
-import {IconLogo} from '@/icons';
+import {Tag, IconLogo} from '@panda-design/components';
 import {Page, GroupTitle, Grid} from '@/components';
 
 const EllipsisTag = styled(Tag)`

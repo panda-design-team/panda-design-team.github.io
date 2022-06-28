@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
-import Button from '@/panda-design/button';
-import {IconLogo} from '@/icons';
+import {Button, IconLogo} from '@panda-design/components';
 import {Page, GroupTitle, Grid} from '@/components';
 
 const VerticalCenter = styled.div`
