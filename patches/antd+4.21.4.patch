@@ -1,0 +1,45 @@
+diff --git a/node_modules/antd/dist/antd.js b/node_modules/antd/dist/antd.js
+index 0ffb106..0d40ae0 100644
+--- a/node_modules/antd/dist/antd.js
++++ b/node_modules/antd/dist/antd.js
+@@ -5042,9 +5042,7 @@ var InternalButton = function InternalButton(props, ref) {
+     return buttonNode;
+   }
+ 
+-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__["createElement"](_util_wave__WEBPACK_IMPORTED_MODULE_13__[/* default */ "a"], {
+-    disabled: !!innerLoading
+-  }, buttonNode);
++  return buttonNode;
+ };
+ 
+ var Button = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__["forwardRef"](InternalButton);
+diff --git a/node_modules/antd/es/button/button.js b/node_modules/antd/es/button/button.js
+index befedc1..d513b78 100644
+--- a/node_modules/antd/es/button/button.js
++++ b/node_modules/antd/es/button/button.js
+@@ -255,9 +255,7 @@ var InternalButton = function InternalButton(props, ref) {
+     return buttonNode;
+   }
+ 
+-  return /*#__PURE__*/React.createElement(Wave, {
+-    disabled: !!innerLoading
+-  }, buttonNode);
++  return buttonNode;
+ };
+ 
+ var Button = /*#__PURE__*/React.forwardRef(InternalButton);
+diff --git a/node_modules/antd/lib/button/button.js b/node_modules/antd/lib/button/button.js
+index e868b2b..b485b5b 100644
+--- a/node_modules/antd/lib/button/button.js
++++ b/node_modules/antd/lib/button/button.js
+@@ -282,9 +282,7 @@ var InternalButton = function InternalButton(props, ref) {
+     return buttonNode;
+   }
+ 
+-  return /*#__PURE__*/React.createElement(_wave["default"], {
+-    disabled: !!innerLoading
+-  }, buttonNode);
++  return buttonNode;
+ };
+ 
+ var Button = /*#__PURE__*/React.forwardRef(InternalButton);

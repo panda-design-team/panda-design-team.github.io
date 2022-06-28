@@ -8,10 +8,10 @@ interface LinkProps extends PandaLinkProps {
     disabledReason?: ReactNode;
 }
 
-function Link(props: LinkProps) {
-    if (props.disabled) {
+function Link({disabledReason, ...props}: LinkProps) {
+    if (props.disabled && disabledReason) {
         return (
-            <Tooltip title={props.disabledReason}>
+            <Tooltip title={disabledReason}>
                 <PandaLink {...props} />
             </Tooltip>
         );

@@ -4,5 +4,5 @@ import './index.global.less';
 
 export const {createLink, Link} = createFactory({
     basename: '',
-    externalIcon: <IconExternal />,
+    externalIcon: <IconExternal className="panda-icon-external" />,
 });
