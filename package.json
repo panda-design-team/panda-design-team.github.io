@@ -14,7 +14,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@panda-design/components": "^0.0.1",
+    "@panda-design/components": "^0.0.2",
     "antd": "^4.21.4",
     "lodash": "^4.17.21",
     "react": "^18.2.0",

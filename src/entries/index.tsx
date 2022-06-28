@@ -1,5 +1,6 @@
 // TODO 等 antd@5 支持并发模式
 import {render} from 'react-dom';
+import 'antd/dist/antd.less';
 import {PrefacePage} from '@/pages/PrefacePage';
 import {ColorPage} from '@/pages/ColorPage';
 import {TypographyPage} from '@/pages/TypographyPage';

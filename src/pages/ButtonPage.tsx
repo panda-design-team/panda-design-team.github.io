@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 import {Button, IconLogo} from '@panda-design/components';
 import {Page, GroupTitle, Grid} from '@/components';
+import {createLink} from '@/components/Link';
+
+const DocLink = createLink('https://github.com/panda-design-team/panda-design-team.github.io/blob/main/patches/README.md');
 
 const VerticalCenter = styled.div`
     display: flex;
@@ -10,6 +13,13 @@ const VerticalCenter = styled.div`
 export const ButtonPage = () => {
     return (
         <Page title="Button 按钮">
+            <div>
+                <p>
+                    由于 antd@4 波浪动效的实现使用了 ::after 伪类，在使用新动效时会有冲突，这导致点击按钮后动画效果会有一些偏差。在 Panda Design 正式发布之时，我们承诺会解决此问题，但此时，你需要
+                    <DocLink>参考此文档</DocLink>
+                    禁用 antd Button 的波浪效果。
+                </p>
+            </div>
             <Grid
                 title="主要按钮"
                 description="多用于强烈引导用户的操作或多个按钮组合在一起的区分，比如新建操作，确定操作"
