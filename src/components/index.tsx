@@ -1,4 +1,5 @@
 import {ReactNode, useCallback} from 'react';
+import {CheckOutlined} from '@ant-design/icons';
 import styled from '@emotion/styled';
 import {createMappedRegion} from 'region-core';
 
@@ -13,7 +14,7 @@ const PageTitle = styled.div`
     height: 118px;
     background-color: var(--color-gray-3);
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
 `;
 
 const PageTitleExtra = styled.div`
@@ -27,15 +28,22 @@ const PageContainer = styled.div`
     gap: 80px;
 `;
 
+const StyledCheckOutlined = styled(CheckOutlined)`
+    font-size: 100px;
+    color: var(--color-success-5);
+`;
+
 const pageVisibleRegion = createMappedRegion<string, boolean>(true, {withLocalStorageKey: 'PandaDesign/page'});
 
 interface PageProps {
     title: string;
+    className?: string;
+    done?: boolean;
     status?: string;
     children?: ReactNode;
 }
 
-export function Page({title, children, status}: PageProps) {
+export function Page({title, className, children, status, done}: PageProps) {
     const visible = pageVisibleRegion.useValue(title);
     const toggle = useCallback(
         () => {
@@ -45,8 +53,12 @@ export function Page({title, children, status}: PageProps) {
     );
     return (
         <>
-            <PageTitle onClick={toggle}>{title}{status && <PageTitleExtra>{status}</PageTitleExtra>}</PageTitle>
-            {visible && <PageContainer>{children}</PageContainer>}
+            <PageTitle onClick={toggle}>
+                {title}
+                {status && <PageTitleExtra>{status}</PageTitleExtra>}
+                {done && <StyledCheckOutlined />}
+            </PageTitle>
+            {visible && <PageContainer className={className}>{children}</PageContainer>}
         </>
     );
 }
@@ -67,21 +79,28 @@ const GridContainer = styled.div<{repeat?: number}>`
 
 interface GridProps {
     title?: string;
+    className?: string;
     description?: string;
     children: ReactNode;
     repeat?: number;
 }
 
-export function Grid({title, description, children, repeat = 3}: GridProps) {
+export function Grid({title, className, description, children, repeat = 3}: GridProps) {
     return (
         <div>
             {title && <h1>{title}</h1>}
             {description && <p>{description}</p>}
-            <GridContainer repeat={repeat}>{children}</GridContainer>
+            <GridContainer className={className} repeat={repeat}>{children}</GridContainer>
         </div>
     );
 }
 
-export const GroupTitle = styled.div`
+export const ColumnTitle = styled.div`
+    color: var(--color-gray-8);
+`;
+
+export const RowTitle = styled.div`
+    display: flex;
+    align-items: center;
     color: var(--color-gray-8);
 `;

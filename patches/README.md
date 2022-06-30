@@ -2,7 +2,7 @@
 
 ## 如何引用该 patch
 
-复制 `patches` 目录以及其下的 `antd+4.21.4.patch`
+复制 `patches` 目录下的 `antd+4.21.4.patch.back` 为 `antd+4.21.4.patch`
 
 在 `package.json` 中增加:
 

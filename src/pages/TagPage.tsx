@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
-import {Tag, IconLogo} from '@panda-design/components';
-import {Page, GroupTitle, Grid} from '@/components';
+import {IconLogo} from '@/panda-design';
+import Tag from '@/panda-design/tag';
+import {Page, ColumnTitle, Grid} from '@/components';
 
 const EllipsisTag = styled(Tag)`
     width: 100px !important;
@@ -12,23 +13,23 @@ const EllipsisTag = styled(Tag)`
 
 export const TagPage = () => {
     return (
-        <Page title="Tag 标签">
+        <Page title="Tag 标签" done>
             <Grid title="基础标签" repeat={2}>
                 <Tag type="flat">标签</Tag>
                 <EllipsisTag type="flat">标签文字很多放不下</EllipsisTag>
             </Grid>
             <Grid title="标签样式表" repeat={11}>
-                <GroupTitle>primary</GroupTitle>
-                <GroupTitle>flat</GroupTitle>
-                <GroupTitle>bordered</GroupTitle>
-                <GroupTitle>border-default</GroupTitle>
-                <GroupTitle>text-default</GroupTitle>
-                <GroupTitle>round</GroupTitle>
-                <GroupTitle>round</GroupTitle>
-                <GroupTitle>round</GroupTitle>
-                <GroupTitle>round</GroupTitle>
-                <GroupTitle>round</GroupTitle>
-                <GroupTitle>disabled</GroupTitle>
+                <ColumnTitle>primary</ColumnTitle>
+                <ColumnTitle>flat</ColumnTitle>
+                <ColumnTitle>bordered</ColumnTitle>
+                <ColumnTitle>border-default</ColumnTitle>
+                <ColumnTitle>text-default</ColumnTitle>
+                <ColumnTitle>round</ColumnTitle>
+                <ColumnTitle>round</ColumnTitle>
+                <ColumnTitle>round</ColumnTitle>
+                <ColumnTitle>round</ColumnTitle>
+                <ColumnTitle>round</ColumnTitle>
+                <ColumnTitle>disabled</ColumnTitle>
                 <Tag color="brand" type="primary">标签</Tag>
                 <Tag color="brand" type="flat">标签</Tag>
                 <Tag color="brand" type="bordered">标签</Tag>

@@ -1,4 +1,4 @@
-import {Page, GroupTitle, Grid} from '@/components';
+import {Page, ColumnTitle, Grid} from '@/components';
 import {createLink, Link, LinkWithDisabledReason} from '@/components/Link';
 
 interface Params {
@@ -12,7 +12,7 @@ const PackageLink = createLink('https://github.com/dancerphil/react-router-templ
 
 export const LinkPage = () => {
     return (
-        <Page title="Link 超链接">
+        <Page title="Link 超链接" done>
             <div>
                 <p>
                     一般情况下，Link 经常需要和 react-router-dom 配合使用，所以我们没有在 panda-design 导出 Link 组件，你可以
@@ -27,10 +27,10 @@ export const LinkPage = () => {
                 repeat={4}
                 title="超链接"
             >
-                <GroupTitle>默认 / 悬浮 / 点击</GroupTitle>
-                <GroupTitle>文字</GroupTitle>
-                <GroupTitle>无样式（antd全局样式控制）</GroupTitle>
-                <GroupTitle>禁用</GroupTitle>
+                <ColumnTitle>默认 / 悬浮 / 点击</ColumnTitle>
+                <ColumnTitle>文字</ColumnTitle>
+                <ColumnTitle>无样式（antd全局样式控制）</ColumnTitle>
+                <ColumnTitle>禁用</ColumnTitle>
                 <Link to="/home">home</Link>
                 <Link to="/home" linkType="text">home</Link>
                 <Link to="/home" linkType="none">home</Link>

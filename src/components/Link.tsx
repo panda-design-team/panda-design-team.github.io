@@ -1,7 +1,7 @@
 import createFactory, {LinkProps} from 'react-router-template-link';
-import {IconExternal} from '@panda-design/components';
 import {ReactNode} from 'react';
 import {Tooltip} from 'antd';
+import {IconExternal} from '@/panda-design';
 
 export const {createLink, Link} = createFactory({
     basename: '',
