@@ -1,28 +1,18 @@
-import {Button as PandaButtonV4} from '@panda-design/components';
-import {Button as PandaButtonV5, IconLogo} from '@/panda-design';
+import {Button, IconLogo} from '@/panda-design';
 import {Page, ColumnTitle, Grid, RowTitle} from '@/components';
 import {createLink} from '@/components/Link';
 
 const DocLink = createLink('https://github.com/panda-design-team/panda-design-team.github.io/blob/main/patches/README.md');
 
-interface Props {
-    version: number;
-}
-
-export const ButtonPage = ({version}: Props) => {
-    const Button = version === 4 ? PandaButtonV4 : PandaButtonV5;
+export const ButtonPage = () => {
     return (
-        <Page title={`Button 按钮（v${version}）`} done={version === 4}>
+        <Page title={'Button 按钮'} done>
             <div>
-                {version === 4 ? (
-                    <p>
-                        由于 antd@4 波浪动效的实现使用了 ::after 伪类，在使用新动效时会有冲突，这导致点击按钮后动画效果会有一些偏差。在 Panda Design 正式发布之时，我们承诺会解决此问题，但此时，你需要
-                        <DocLink>参考此文档</DocLink>
-                        禁用 antd Button 的波浪效果。
-                    </p>
-                ) : (
-                    <p>【experimental】antd@5 中，修改 prefixCls 不再有移除所有样式的效果。需要与 antd 确认这是否是一个 case。</p>
-                )}
+                <p>
+                    由于 antd 波浪动效的实现使用了 ::after 伪类，在使用新动效时会有冲突，这导致点击按钮后动画效果会有一些偏差。在 Panda Design 正式发布之时，我们承诺会解决此问题，但此时，你需要
+                    <DocLink>参考此文档</DocLink>
+                    处理动效的冲突。
+                </p>
             </div>
             <Grid
                 title="主要按钮"

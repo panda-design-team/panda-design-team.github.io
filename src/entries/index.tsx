@@ -28,8 +28,7 @@ const app = (
         <PrefacePage />
         <ColorPage />
         <TypographyPage />
-        <ButtonPage version={4} />
-        <ButtonPage version={5} />
+        <ButtonPage />
         <LinkPage />
         <FormPage />
         <TabsPage />

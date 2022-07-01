@@ -1,4 +1,5 @@
 import * as React from 'react';
+import cx from 'classnames';
 import {Button as AntdButton, ButtonProps as AntdButtonProps, Tooltip} from 'antd';
 import {IconLogo} from '../icons';
 import './index.global.less';
@@ -18,13 +19,14 @@ const PandaButton = React.forwardRef<unknown, ButtonProps>(({tooltip, disabledRe
     const nextIcon = props?.icon === undefined ? (nextType === 'text' ? <IconLogo /> : undefined) : props?.icon;
     // TODO 内部迁移后移除 text 类型 size 默认为 small
     const nextSize = props?.size === undefined ? (nextType === 'text' ? 'small' : undefined) : props?.size;
-    const nextProps = {...props, type: nextType, icon: nextIcon, size: nextSize, ref};
+    const nextClassName = cx('panda-button', `panda-button-${nextType}`, `panda-button-${nextSize}`);
+    const nextProps = {...props, type: 'custom', icon: nextIcon, size: undefined, className: nextClassName, ref};
     // @ts-expect-error
-    const element = <AntdButton prefixCls="panda-button" {...nextProps} />;
+    const element = <AntdButton {...nextProps} />;
     if (nextProps.disabled && disabledReason) {
         return (
             <Tooltip title={disabledReason}>
-                {element}
+                <span>{element}</span>
             </Tooltip>
         );
     }

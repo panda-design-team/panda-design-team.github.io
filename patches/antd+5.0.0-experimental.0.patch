@@ -1,0 +1,13 @@
+diff --git a/node_modules/antd/es/button/button.js b/node_modules/antd/es/button/button.js
+index c3017f7..ae75a13 100644
+--- a/node_modules/antd/es/button/button.js
++++ b/node_modules/antd/es/button/button.js
+@@ -40,7 +40,7 @@ function isString(str) {
+ }
+ 
+ function isUnBorderedButtonType(type) {
+-  return type === 'text' || type === 'link';
++  return type === 'text' || type === 'link' || type === 'custom';
+ }
+ 
+ function isReactFragment(node) {

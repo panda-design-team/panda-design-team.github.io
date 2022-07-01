@@ -1,14 +1,15 @@
 import {ThemeConfig} from 'antd/es/config-provider/context';
-import colors from './colors';
 
 export const theme: ThemeConfig = {
     token: {
         colorPrimary: '#000',
-        colorSuccess: colors['--color-success-6'],
-        colorWarning: colors['--color-warning-6'],
-        colorError: colors['--color-error-6'],
-        colorInfo: colors['--color-info-6'],
+        colorSuccess: '#40b333',
+        colorWarning: '#f27c49',
+        colorError: '#e64552',
+        colorInfo: '#317ff5',
         fontSizeBase: 14,
+        motionBase: 0,
+        motionUnit: 0,
     },
     override: {
         derivative: {
