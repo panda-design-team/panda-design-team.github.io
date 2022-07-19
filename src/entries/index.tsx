@@ -1,6 +1,6 @@
 // TODO 等 antd@5 支持并发模式
 import {render} from 'react-dom';
-import 'antd/dist/antd.less';
+import {resetStyle} from '@/components/theme';
 import Provider from '@/components/Provider';
 import {PrefacePage} from '@/pages/PrefacePage';
 import {ColorPage} from '@/pages/ColorPage';
@@ -19,9 +19,11 @@ import {TablePage} from '@/pages/TablePage';
 import {AlertPage} from '@/pages/AlertPage';
 import {MessagePage} from '@/pages/MessagePage';
 import {PaginationPage} from '@/pages/PaginationPage';
+import {GaussianBackgroundPage} from '@/pages/GaussianBackgroundPage';
 
 // TODO 加这个是为了提高优先级，但是这个有点不太能接受，看看 antd@5 有没有更好的方案
 document.body.setAttribute('data-theme', 'panda');
+resetStyle();
 
 const app = (
     <Provider>
@@ -42,6 +44,7 @@ const app = (
         <AlertPage />
         <MessagePage />
         <PaginationPage />
+        <GaussianBackgroundPage />
     </Provider>
 );
 

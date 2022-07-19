@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+import TinyColor from '@ctrl/tinycolor';
+import {ColorLevel, colors, ColorType} from '@/panda-design/color';
 import {Page, Grid} from '@/components';
 
 const ColorItem = styled.div`
@@ -10,20 +12,27 @@ const ColorItem = styled.div`
 `;
 
 interface ColorGroupProps {
-    type: string;
+    type: ColorType;
 }
+
+const colorLevels: ColorLevel[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
 export function ColorGroup({type}: ColorGroupProps) {
     return (
         <div>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => (
-                <ColorItem
-                    key={i}
-                    style={{backgroundColor: `var(--color-${type}-${i})`}}
-                >
-                    {`${type[0].toUpperCase()}${type.slice(1)}${i}`}
-                </ColorItem>
-            ))}
+            {colorLevels.map(i => {
+                const color = colors[`${type}-${i}`];
+                // @ts-ignore
+                const isLight = new TinyColor(color).isLight();
+                return (
+                    <ColorItem
+                        key={i}
+                        style={{backgroundColor: color, color: isLight ? 'black' : 'white'}}
+                    >
+                        {`${type[0].toUpperCase()}${type.slice(1)}${i}`}
+                    </ColorItem>
+                );
+            })}
         </div>
     );
 }

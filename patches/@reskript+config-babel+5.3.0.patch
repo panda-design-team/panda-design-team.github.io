@@ -1,0 +1,19 @@
+diff --git a/node_modules/@reskript/config-babel/dist/transformMinimal.js b/node_modules/@reskript/config-babel/dist/transformMinimal.js
+index 11c8187..369a920 100644
+--- a/node_modules/@reskript/config-babel/dist/transformMinimal.js
++++ b/node_modules/@reskript/config-babel/dist/transformMinimal.js
+@@ -33,14 +33,6 @@ export default (options) => {
+         ],
+         shouldEnable('reflect-metadata', uses) && pluginTypeScriptMetadata,
+         ...parseOnly.plugins || [],
+-        shouldEnable('antd', uses) && [
+-            pluginImport,
+-            {
+-                libraryName: 'antd',
+-                libraryDirectory: 'es',
+-                style: true,
+-            },
+-        ],
+     ];
+     return {
+         presets: parseOnly.presets,

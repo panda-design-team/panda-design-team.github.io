@@ -6,7 +6,7 @@ const DocLink = createLink('https://github.com/panda-design-team/panda-design-te
 
 export const ButtonPage = () => {
     return (
-        <Page title={'Button 按钮'} done>
+        <Page title="Button 按钮" status="动效冲突">
             <div>
                 <p>
                     由于 antd 波浪动效的实现使用了 ::after 伪类，在使用新动效时会有冲突，这导致点击按钮后动画效果会有一些偏差。在 Panda Design 正式发布之时，我们承诺会解决此问题，但此时，你需要
