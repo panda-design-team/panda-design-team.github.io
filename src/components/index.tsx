@@ -2,6 +2,7 @@ import {ReactNode, useCallback} from 'react';
 import {CheckOutlined} from '@ant-design/icons';
 import styled from '@emotion/styled';
 import {createMappedRegion} from 'region-core';
+import {colors} from '@/panda-design/color';
 
 const PageTitle = styled.div`
     position: sticky;
@@ -9,12 +10,13 @@ const PageTitle = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 46px;
+    padding: 0 50px;
     font-size: 48px;
-    height: 118px;
+    height: 120px;
     background-color: var(--color-gray-3);
     cursor: pointer;
     z-index: 2;
+    box-shadow: 0px -40px 40px ${colors['gray-1']};
 `;
 
 const PageTitleExtra = styled.div`
@@ -24,7 +26,7 @@ const PageTitleExtra = styled.div`
 const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 80px 96px 96px 96px;
+    padding: 80px 100px 100px 100px;
     gap: 80px;
 `;
 
@@ -33,7 +35,7 @@ const StyledCheckOutlined = styled(CheckOutlined)`
     color: var(--color-success-5);
 `;
 
-const pageVisibleRegion = createMappedRegion<string, boolean>(true, {withLocalStorageKey: 'PandaDesign/page'});
+const pageVisibleRegion = createMappedRegion<string, boolean>(false, {withLocalStorageKey: 'PandaDesign/page'});
 
 interface PageProps {
     title: string;

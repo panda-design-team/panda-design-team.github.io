@@ -29,7 +29,7 @@ export const LinkPage = () => {
             >
                 <ColumnTitle>默认 / 悬浮 / 点击</ColumnTitle>
                 <ColumnTitle>文字</ColumnTitle>
-                <ColumnTitle>无样式（antd全局样式控制）</ColumnTitle>
+                <ColumnTitle>无样式</ColumnTitle>
                 <ColumnTitle>禁用</ColumnTitle>
                 <Link to="/home">home</Link>
                 <Link to="/home" linkType="text">home</Link>
