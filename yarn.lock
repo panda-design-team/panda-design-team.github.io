@@ -1703,11 +1703,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@panda-design/components@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@panda-design/components/-/components-0.0.3.tgz#f472b10f4a948e9ed57b0e4661f77749c0952705"
-  integrity sha512-0fDLSnjafX89jMCodFGLjP8F0xp9oAKvudXabIHi6TEVTMBuY1KhW1aO6dwpGfArEIbrfNrXX4d1NwXP3M17pQ==
-
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.6":
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.7.tgz#58f8217ba70069cc6a73f5d7e05e85b458c150e2"
@@ -5390,12 +5385,10 @@ g-status@^2.0.2:
     matcher "^1.0.0"
     simple-git "^1.85.0"
 
-gaussian-background@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gaussian-background/-/gaussian-background-1.0.0.tgz#68d95eb04d7b4ac0af73eec3f708dbe5a47ec34f"
-  integrity sha512-TmaD6GNLlr4GXiEjuFmIwORH8NC9T5x+chPcnApLRLOvTAtw6XQtl9u8l01Gm+ygMhEkrRX4RrBpiN98G3bJkA==
-  dependencies:
-    react "^16.12.0"
+gaussian-background-generator@^0.0.1-alpha.1:
+  version "0.0.1-alpha.1"
+  resolved "https://registry.yarnpkg.com/gaussian-background-generator/-/gaussian-background-generator-0.0.1-alpha.1.tgz#97c724aad2446f05f1b66d62e5fa77784fef6f6d"
+  integrity sha512-d8cRKT3g1fubvOJfYG8L6CRDBorLojBqICoylcoYu20wOS17xN4Dv3ydzhpFa6SHQOw108tfbHRAKdQf64UKTA==
 
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
@@ -9155,15 +9148,6 @@ react-test-renderer@^16.0.0-0:
     prop-types "^15.6.2"
     react-is "^16.8.6"
     scheduler "^0.19.1"
-
-react@^16.12.0:
-  version "16.14.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
-  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
 
 react@^18.2.0:
   version "18.2.0"
