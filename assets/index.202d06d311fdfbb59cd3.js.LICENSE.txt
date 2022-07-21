@@ -47,6 +47,17 @@
  */
 
 /**
+ * Gaussian Background Generator
+ *
+ * @version    0.5.1
+ * @author     Aiden Foxx
+ * @license    MIT License
+ * @copyright  2015 Aiden Foxx
+ * @link       http://github.com/aidenfoxx
+ * @twitter    @furiousfoxx
+ */
+
+/**
  * React Router DOM v6.3.0
  *
  * Copyright (c) Remix Software Inc.
