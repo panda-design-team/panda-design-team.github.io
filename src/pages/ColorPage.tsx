@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import TinyColor from '@ctrl/tinycolor';
 import {ColorLevel, colors, ColorType} from '@/panda-design/color';
 import {Page, Grid} from '@/components';
+import {isLight} from '@/utils';
 
 const ColorItem = styled.div`
     display: flex;
@@ -22,12 +22,10 @@ export function ColorGroup({type}: ColorGroupProps) {
         <div>
             {colorLevels.map(i => {
                 const color = colors[`${type}-${i}`];
-                // @ts-ignore
-                const isLight = new TinyColor(color).isLight();
                 return (
                     <ColorItem
                         key={i}
-                        style={{backgroundColor: color, color: isLight ? 'black' : 'white'}}
+                        style={{backgroundColor: color, color: isLight(color) ? 'black' : 'white'}}
                     >
                         {`${type[0].toUpperCase()}${type.slice(1)}${i}`}
                     </ColorItem>
@@ -39,7 +37,7 @@ export function ColorGroup({type}: ColorGroupProps) {
 
 export const ColorPage = () => {
     return (
-        <Page title="Color 色彩">
+        <Page disableShadow title="Color 色彩">
             <Grid title="主色">
                 <ColorGroup type="brand" />
                 <ColorGroup type="gray" />

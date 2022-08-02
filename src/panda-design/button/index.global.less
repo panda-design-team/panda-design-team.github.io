@@ -1,5 +1,5 @@
 /* stylelint-disable no-duplicate-selectors, number-leading-zero */
-[data-theme="panda"] {
+#panda-holder {
     /* 布局 */
 
     .panda-button {
@@ -17,6 +17,8 @@
         // 来自 antd 的神奇数字
         line-height: 1.5715;
         white-space: nowrap;
+        // new in v5
+        transition: none;
 
         &[disabled] {
             cursor: not-allowed;

@@ -3,7 +3,7 @@ import {ThemeConfig} from 'antd/es/config-provider/context';
 
 export const theme: ThemeConfig = {
     token: {
-        brandColor: '#000',
+        colorPrimary: '#000',
         colorSuccess: '#40b333',
         colorWarning: '#f27c49',
         colorError: '#e64552',
@@ -14,12 +14,15 @@ export const theme: ThemeConfig = {
     },
     override: {
         derivative: {
-            colorSplit: 'transparent',
-            colorBgContainerSecondary: 'transparent',
         },
         alias: {
-
+            colorSplit: 'transparent',
+            // colorBgContainerSecondary: 'transparent',
         },
+        // 调整默认阴影
+        Button: {},
+        // 调整 padding
+        Tabs: {},
     },
     hashed: true,
 };

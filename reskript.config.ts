@@ -5,7 +5,7 @@ export default configure(
     {
         build: {
             appTitle: 'Panda Design',
+            favicon: 'favicon.ico',
         },
     }
 );
-

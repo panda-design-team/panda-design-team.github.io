@@ -13,13 +13,13 @@ export interface ButtonProps extends Omit<AntdButtonProps, 'type'> {
 }
 
 const PandaButton = React.forwardRef<unknown, ButtonProps>(({tooltip, disabledReason, ...props}, ref) => {
-    // TODO 内部迁移后移除
-    // @ts-expect-error
-    const nextType = props?.type === 'link' || props?.type === 'icon' ? 'text' : props?.type;
+    const nextType = props?.type === 'icon' ? 'text' : props?.type;
     const nextIcon = props?.icon === undefined ? (nextType === 'text' ? <IconLogo /> : undefined) : props?.icon;
-    // TODO 内部迁移后移除 text 类型 size 默认为 small
-    const nextSize = props?.size === undefined ? (nextType === 'text' ? 'small' : undefined) : props?.size;
-    const nextClassName = cx('panda-button', `panda-button-${nextType}`, `panda-button-${nextSize}`);
+    const nextClassName = cx(
+        'panda-button',
+        `panda-button-${nextType}`,
+        props?.size && `panda-button-${props?.size}`
+    );
     const nextProps = {...props, type: 'custom', icon: nextIcon, size: undefined, className: nextClassName, ref};
     // @ts-expect-error
     const element = <AntdButton {...nextProps} />;

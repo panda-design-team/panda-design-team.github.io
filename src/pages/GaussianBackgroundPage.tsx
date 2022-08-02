@@ -41,6 +41,8 @@ const StyledGaussianBackground = styled(GaussianBackground)`
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    border-radius: 4px;
 `;
 
 export const GaussianBackgroundPage = () => {

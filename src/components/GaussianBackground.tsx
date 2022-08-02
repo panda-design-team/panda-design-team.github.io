@@ -27,9 +27,7 @@ const defaultOptions: Options = {
 
 const Container = styled.div`
     position: relative;
-    border-radius: 5px;
     overflow: hidden;
-    color: white;
 `;
 
 const StyledCanvas = styled.canvas`

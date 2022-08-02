@@ -21,8 +21,6 @@ import {MessagePage} from '@/pages/MessagePage';
 import {PaginationPage} from '@/pages/PaginationPage';
 import {GaussianBackgroundPage} from '@/pages/GaussianBackgroundPage';
 
-// TODO 加这个是为了提高优先级，但是这个有点不太能接受，看看 antd@5 有没有更好的方案
-document.body.setAttribute('data-theme', 'panda');
 resetStyle();
 
 const app = (
@@ -49,5 +47,9 @@ const app = (
 );
 
 const root = document.createElement('div');
+
+// TODO 加这个是为了提高优先级，但是这个有点不太能接受，看看 antd@5 有没有更好的方案
+root.setAttribute('id', 'panda-holder');
+
 document.body.appendChild(root);
 render(app, root);

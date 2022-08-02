@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import {createMappedRegion} from 'region-core';
 import {colors} from '@/panda-design/color';
 
-const PageTitle = styled.div`
+const PageTitle = styled.div<{disableShadow?: boolean}>`
     position: sticky;
     top: 0;
     display: flex;
@@ -16,7 +16,19 @@ const PageTitle = styled.div`
     background-color: var(--color-gray-3);
     cursor: pointer;
     z-index: 2;
-    box-shadow: 0px -40px 40px ${colors['gray-1']};
+    ${props => !props.disableShadow && `box-shadow: 0px -40px 40px ${colors['gray-1']};`}
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+`;
+
+const PageTitleFont = styled.div`
+    font-family: Din Alternate, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 `;
 
 const PageTitleExtra = styled.div`
@@ -35,17 +47,19 @@ const StyledCheckOutlined = styled(CheckOutlined)`
     color: var(--color-success-5);
 `;
 
-const pageVisibleRegion = createMappedRegion<string, boolean>(false, {withLocalStorageKey: 'PandaDesign/page'});
+const pageVisibleRegion = createMappedRegion<string, boolean>(true, {withLocalStorageKey: 'PandaDesign/page'});
 
 interface PageProps {
     title: string;
+    titleNode?: ReactNode;
     className?: string;
     done?: boolean;
+    disableShadow?: boolean;
     status?: string;
     children?: ReactNode;
 }
 
-export function Page({title, className, children, status, done}: PageProps) {
+export function Page({title, titleNode = title, className, children, status, done, disableShadow}: PageProps) {
     const visible = pageVisibleRegion.useValue(title);
     const toggle = useCallback(
         () => {
@@ -55,8 +69,8 @@ export function Page({title, className, children, status, done}: PageProps) {
     );
     return (
         <>
-            <PageTitle onClick={toggle}>
-                {title}
+            <PageTitle disableShadow={disableShadow} onClick={toggle}>
+                <PageTitleFont>{titleNode}</PageTitleFont>
                 {status && <PageTitleExtra>{status}</PageTitleExtra>}
                 {done && <StyledCheckOutlined />}
             </PageTitle>
