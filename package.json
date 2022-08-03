@@ -8,7 +8,7 @@
     "build": "skr build --build-target=stable --clean",
     "test": "skr test --",
     "lint": "skr lint",
-    "deploy": "gh-pages -d dist",
+    "deploy": "yarn build && gh-pages -d dist",
     "postinstall": "patch-package"
   },
   "dependencies": {
