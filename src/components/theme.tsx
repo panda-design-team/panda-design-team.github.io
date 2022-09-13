@@ -9,6 +9,7 @@ export const theme: ThemeConfig = {
         colorError: '#e64552',
         colorInfo: '#317ff5',
         fontSizeBase: 14,
+        radiusBase: 2,
         // motionBase: 0,
         // motionUnit: 0,
     },
@@ -44,6 +45,8 @@ export const resetStyle = () => {
             font-size: 14px;
             font-variant: tabular-nums;
             line-height: 1.5715;
+            // additional
+            overflow-x: hidden;
         }
     `;
 };

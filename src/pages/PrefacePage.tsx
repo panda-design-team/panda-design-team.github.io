@@ -46,7 +46,7 @@ export const PrefacePage = () => {
                 <p>我们会尽可能的与 antd 原本的 api 兼容，让你可以很快速的在各个风格内切换，让风格切换成为一件令人愉悦的事情。</p>
                 <p>这份规范的源代码可以在<DemoLink>这里</DemoLink>找到。</p>
                 <br />
-                <p>你看到的这份规范基于 antd@5.0.0-experimental.10，并非最终定稿。</p>
+                <p>你看到的这份规范基于 antd@5.0.0-experimental.20，并非最终定稿。</p>
             </div>
         </StyledGaussianBackground>
     );

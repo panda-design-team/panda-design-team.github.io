@@ -1,11 +1,9 @@
-import {CSSProperties} from 'react';
-
 export type ColorType = 'gray' | 'brand' | 'warning' | 'success' | 'error' | 'cyan' | 'light-purple' | 'magenta' | 'gold';
 
 export type ColorLevel = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
 
 // 整理为函数
-export const colors: Record<`${ColorType}-${ColorLevel}`, CSSProperties['backgroundColor']> = {
+export const colors: Record<`${ColorType}-${ColorLevel}`, string> = {
     'gray-1': '#fff',
     'gray-2': '#f7f7f7',
     'gray-3': '#f2f2f2',

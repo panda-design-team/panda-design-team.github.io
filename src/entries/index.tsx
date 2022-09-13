@@ -1,5 +1,6 @@
 // TODO 等 antd@5 支持并发模式
 import {render} from 'react-dom';
+import 'antd/dist/reset.css';
 import {resetStyle} from '@/components/theme';
 import Provider from '@/components/Provider';
 import {PrefacePage} from '@/pages/PrefacePage';

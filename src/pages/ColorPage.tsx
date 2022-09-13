@@ -3,12 +3,16 @@ import {ColorLevel, colors, ColorType} from '@/panda-design/color';
 import {Page, Grid} from '@/components';
 import {isLight} from '@/utils';
 
-const ColorItem = styled.div`
+const ColorItem = styled.div<{color: string}>`
     display: flex;
     align-items: center;
     padding-left: 20px;
     width: 264px;
     height: 48px;
+    ${props => `
+        background-color: ${props.color};
+        color: ${isLight(props.color) ? 'black' : 'white'}
+    `}
 `;
 
 interface ColorGroupProps {
@@ -25,7 +29,7 @@ export function ColorGroup({type}: ColorGroupProps) {
                 return (
                     <ColorItem
                         key={i}
-                        style={{backgroundColor: color, color: isLight(color) ? 'black' : 'white'}}
+                        color={color}
                     >
                         {`${type[0].toUpperCase()}${type.slice(1)}${i}`}
                     </ColorItem>
