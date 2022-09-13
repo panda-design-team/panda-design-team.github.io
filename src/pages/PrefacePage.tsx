@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
+import {Segmented, Space} from 'antd';
 import {Layer} from 'gaussian-background-generator';
+import {IconLogo} from '@panda-design/components';
 import {createLink} from '@/components/Link';
-import img from '@/assets/banner.png';
 import GaussianBackground from '@/components/GaussianBackground';
+import {useThemeType, setThemeType} from '@/regions';
 
 const layersLight: Layer[] = [
     {orbs: 4, radius: 20, maxVelocity: 0.2, color: '#ebf1ff'},
@@ -16,14 +18,17 @@ const layersLight: Layer[] = [
 
 const StyledGaussianBackground = styled(GaussianBackground)`
     padding: 100px 50px 100px 50px;
-    z-index: -1;
+`;
+
+const StyledIconLogo = styled(IconLogo)`
+    font-size: 80px !important;
 `;
 
 export const PageTitle = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    font-size: 48px;
+    gap: 20px;
+    font-size: 80px;
     height: 120px;
     margin-bottom: 50px;
     cursor: pointer;
@@ -35,9 +40,11 @@ export const PageTitle = styled.div`
 const DemoLink = createLink('https://github.com/panda-design-team/panda-design-team.github.io');
 
 export const PrefacePage = () => {
+    const themeType = useThemeType();
+
     return (
         <StyledGaussianBackground layers={layersLight}>
-            <PageTitle><img alt="logo" src={img} /></PageTitle>
+            <PageTitle><StyledIconLogo />Panda Design</PageTitle>
             <div>
                 <p>Panda Design 基于 antd@5 开发的一套设计系统，旨在 Ant Design 的基础上覆盖更多场景。</p>
                 <p>这里是 Panda Design 的设计规范，规范中会详细的介绍每一个组件和它们的使用场景。</p>
@@ -46,7 +53,18 @@ export const PrefacePage = () => {
                 <p>我们会尽可能的与 antd 原本的 api 兼容，让你可以很快速的在各个风格内切换，让风格切换成为一件令人愉悦的事情。</p>
                 <p>这份规范的源代码可以在<DemoLink>这里</DemoLink>找到。</p>
                 <br />
-                <p>你看到的这份规范基于 antd@5.0.0-experimental.20，并非最终定稿。</p>
+                <p>你看到的这份规范基于 antd@5.0.0-experimental.23，并非最终定稿。</p>
+                <p>
+                    <Space>
+                        <div>切换主题</div>
+                        <Segmented
+                            options={['panda', 'antd']}
+                            value={themeType}
+                            // @ts-expect-error
+                            onChange={setThemeType}
+                        />
+                    </Space>
+                </p>
             </div>
         </StyledGaussianBackground>
     );

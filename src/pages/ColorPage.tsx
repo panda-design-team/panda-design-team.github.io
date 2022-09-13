@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import {ColorLevel, colors, ColorType} from '@/panda-design/color';
+import {ColorLevel, colors, ColorType} from '@panda-design/components';
 import {Page, Grid} from '@/components';
 import {isLight} from '@/utils';
 

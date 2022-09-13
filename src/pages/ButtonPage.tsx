@@ -1,5 +1,5 @@
 import {Button as AntButton} from 'antd';
-import {Button, IconLogo} from '@/panda-design';
+import {Button, IconLogo} from '@panda-design/components';
 import {Page, ColumnTitle, Grid, RowTitle} from '@/components';
 import {createLink} from '@/components/Link';
 

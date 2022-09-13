@@ -2,7 +2,7 @@ import {ReactNode, useCallback} from 'react';
 import {CheckOutlined} from '@ant-design/icons';
 import styled from '@emotion/styled';
 import {createMappedRegion} from 'region-core';
-import {colors} from '@/panda-design/color';
+import {colors} from '@panda-design/components';
 
 const PageTitle = styled.div<{disableShadow?: boolean}>`
     position: sticky;
@@ -23,9 +23,9 @@ const PageTitle = styled.div<{disableShadow?: boolean}>`
 `;
 
 const PageTitleFont = styled.div`
-    font-family: Din Alternate, sans-serif;
+    //font-family: Din Alternate, sans-serif;
     font-size: 60px;
-    font-weight: bold;
+    //font-weight: bold;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

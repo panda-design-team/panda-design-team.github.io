@@ -1,6 +1,7 @@
 // TODO 等 antd@5 支持并发模式
 import {render} from 'react-dom';
 import 'antd/dist/reset.css';
+import '@panda-design/components/style';
 import {resetStyle} from '@/components/theme';
 import Provider from '@/components/Provider';
 import {PrefacePage} from '@/pages/PrefacePage';
@@ -21,10 +22,11 @@ import {AlertPage} from '@/pages/AlertPage';
 import {MessagePage} from '@/pages/MessagePage';
 import {PaginationPage} from '@/pages/PaginationPage';
 import {GaussianBackgroundPage} from '@/pages/GaussianBackgroundPage';
+import '@/panda-design/style/patch-antd.global.less';
 
 resetStyle();
 
-const app = (
+const App = () => (
     <Provider>
         <PrefacePage />
         <ColorPage />
@@ -53,4 +55,4 @@ const root = document.createElement('div');
 root.setAttribute('id', 'panda-holder');
 
 document.body.appendChild(root);
-render(app, root);
+render(<App />, root);

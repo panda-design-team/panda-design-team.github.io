@@ -1,5 +1,5 @@
 import {message} from 'antd';
-import {Button} from '@/panda-design';
+import {Button} from '@panda-design/components';
 import {Page, Grid} from '@/components';
 
 export const MessagePage = () => {
