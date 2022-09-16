@@ -1,9 +1,10 @@
 import {Radio, Space} from 'antd';
-import {Page, Grid, ColumnTitle} from '@/components';
+import {ColumnTitle, Grid} from '@/components';
 
-export const RadioPage = () => {
+export const RadioGrids = () => {
     return (
-        <Page title="Radio 单选框" status="待调整">
+        <>
+            <Grid title="Radio 单选框"><div /></Grid>
             <Grid title="基础样式">
                 <ColumnTitle>默认 / 悬浮 / 点击</ColumnTitle>
                 <ColumnTitle>禁用已选</ColumnTitle>
@@ -44,6 +45,6 @@ export const RadioPage = () => {
                     options={[{label: '选项一', value: 1}, {label: '选项二', value: 2, disabled: true}, {label: '选项三', value: 3}]}
                 />
             </Grid>
-        </Page>
+        </>
     );
 };

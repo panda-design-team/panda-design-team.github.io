@@ -1,5 +1,5 @@
 import {Table} from 'antd';
-import {Page, Grid} from '@/components';
+import {Grid} from '@/components';
 
 const dataSource = [
     {
@@ -34,16 +34,15 @@ const columns = [
     },
 ];
 
-export const TablePage = () => {
+export const TableGrids = () => {
     return (
-        <Page title="Table 表格" status="开发中">
-            <div>需要解决与 Tabs 相互冲突的问题</div>
-            <Grid title="基础样式" repeat={1}>
+        <>
+            <Grid title="Table 表格" beforeGrid={<p>需要解决与 Tabs 相互冲突的问题</p>} repeat={1}>
                 <Table
                     columns={columns}
                     dataSource={dataSource}
                 />
             </Grid>
-        </Page>
+        </>
     );
 };

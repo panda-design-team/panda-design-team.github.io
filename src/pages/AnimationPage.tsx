@@ -45,10 +45,10 @@ const StyledGaussianBackground = styled(GaussianBackground)`
     border-radius: 4px;
 `;
 
-export const GaussianBackgroundPage = () => {
+export const AnimationPage = () => {
     return (
-        <Page title="Gaussian Background 呼吸背景" status="开发中">
-            <Grid title="基础样式" repeat={2}>
+        <Page title="8. Animation 动画效果">
+            <Grid title="Gaussian Background 呼吸背景" repeat={2}>
                 <StyledGaussianBackground>
                     静待发布
                 </StyledGaussianBackground>

@@ -41,12 +41,26 @@ export function ColorGroup({type}: ColorGroupProps) {
 
 export const ColorPage = () => {
     return (
-        <Page disableShadow title="Color 色彩">
+        <Page isFirst title="1. Color 色彩">
+            <div>
+                <p>首先介绍一下 Panda Design 的色彩构成。</p>
+                <br />
+                <p>色彩构成了用户对产品的第一印象</p>
+                <p>「黑与白」的对比，是所有色彩中最为强烈的对比。强而有力的黑白对比是 Panda Design 最突出的观感。</p>
+                <p>「黑与白」相互调和，「黑」可以流动为「白」，「白」也可以流动为「黑」。有无相生，「黑与白」的流动，构成了 Panda Design 的交互模式。</p>
+                <br />
+                <p>在整体为黑白的页面主题上，我们再对部分要素通过功能色和辅助色的方式进行高亮，以此引导用户的注意力。</p>
+                <p>比如，我们使用功能色标记「成功」、「失败」、「运行中」等信息，用户在不需要阅读文字的前提下，就可以获知重要信息。</p>
+                <p>再比如，我们对标签增加背景色，以期形成一个对象固有属性的观感。</p>
+            </div>
             <Grid title="主色">
-                <ColorGroup type="brand" />
                 <ColorGroup type="gray" />
             </Grid>
-            <Grid title="功能色">
+            <Grid
+                title="功能色"
+                repeat={4}
+            >
+                <ColorGroup type="brand" />
                 <ColorGroup type="error" />
                 <ColorGroup type="success" />
                 <ColorGroup type="warning" />

@@ -1,5 +1,4 @@
 import {ReactNode, useCallback} from 'react';
-import {CheckOutlined} from '@ant-design/icons';
 import styled from '@emotion/styled';
 import {createMappedRegion} from 'region-core';
 import {colors} from '@panda-design/components';
@@ -31,20 +30,11 @@ const PageTitleFont = styled.div`
     overflow: hidden;
 `;
 
-const PageTitleExtra = styled.div`
-    color: var(--color-gray-7);
-`;
-
 const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 80px 100px 100px 100px;
     gap: 80px;
-`;
-
-const StyledCheckOutlined = styled(CheckOutlined)`
-    font-size: 100px;
-    color: var(--color-success-5);
 `;
 
 const pageVisibleRegion = createMappedRegion<string, boolean>(true, {withLocalStorageKey: 'PandaDesign/page'});
@@ -53,13 +43,11 @@ interface PageProps {
     title: string;
     titleNode?: ReactNode;
     className?: string;
-    done?: boolean;
-    disableShadow?: boolean;
-    status?: string;
+    isFirst?: boolean;
     children?: ReactNode;
 }
 
-export function Page({title, titleNode = title, className, children, status, done, disableShadow}: PageProps) {
+export function Page({title, titleNode = title, className, children, isFirst}: PageProps) {
     const visible = pageVisibleRegion.useValue(title);
     const toggle = useCallback(
         () => {
@@ -69,10 +57,8 @@ export function Page({title, titleNode = title, className, children, status, don
     );
     return (
         <>
-            <PageTitle disableShadow={disableShadow} onClick={toggle}>
+            <PageTitle disableShadow={isFirst} onClick={toggle}>
                 <PageTitleFont>{titleNode}</PageTitleFont>
-                {status && <PageTitleExtra>{status}</PageTitleExtra>}
-                {done && <StyledCheckOutlined />}
             </PageTitle>
             {visible && <PageContainer className={className}>{children}</PageContainer>}
         </>
@@ -86,7 +72,7 @@ const GridContainer = styled.div<{repeat?: number}>`
     column-gap: 30px;
     row-gap: 20px;
     align-items: center;
-    padding-top: 10px;
+    margin-top: 40px;
 
     > * {
         width: fit-content;
@@ -95,18 +81,20 @@ const GridContainer = styled.div<{repeat?: number}>`
 
 interface GridProps {
     title?: string;
+    beforeGrid?: ReactNode;
+    afterGrid?: ReactNode;
     className?: string;
-    description?: string;
-    children: ReactNode;
+    children?: ReactNode;
     repeat?: number;
 }
 
-export function Grid({title, className, description, children, repeat = 3}: GridProps) {
+export function Grid({title, className, beforeGrid, afterGrid, children, repeat = 3}: GridProps) {
     return (
         <div>
             {title && <h1>{title}</h1>}
-            {description && <p>{description}</p>}
-            <GridContainer className={className} repeat={repeat}>{children}</GridContainer>
+            {beforeGrid}
+            {children && <GridContainer className={className} repeat={repeat}>{children}</GridContainer>}
+            {afterGrid}
         </div>
     );
 }

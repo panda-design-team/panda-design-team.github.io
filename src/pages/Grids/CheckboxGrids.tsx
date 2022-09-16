@@ -1,6 +1,6 @@
 import {Checkbox, Space} from 'antd';
 import styled from '@emotion/styled';
-import {Page, Grid, ColumnTitle} from '@/components';
+import {Grid, ColumnTitle} from '@/components';
 
 const StyledGrid = styled(Grid)`
     .ant-checkbox-wrapper {
@@ -8,9 +8,10 @@ const StyledGrid = styled(Grid)`
     }
 `;
 
-export const CheckboxPage = () => {
+export const CheckboxGrids = () => {
     return (
-        <Page title="Checkbox 多选框" done>
+        <>
+            <Grid title="Checkbox 多选框" />
             <StyledGrid title="基础样式">
                 <ColumnTitle>默认 / 悬浮 / 点击</ColumnTitle>
                 <ColumnTitle>禁用已选</ColumnTitle>
@@ -34,6 +35,6 @@ export const CheckboxPage = () => {
                     </Space>
                 </Checkbox.Group>
             </Grid>
-        </Page>
+        </>
     );
 };

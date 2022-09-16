@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import {Tag, IconLogo} from '@panda-design/components';
-import {Page, ColumnTitle, Grid} from '@/components';
+import {ColumnTitle, Grid} from '@/components';
 
 const EllipsisTag = styled(Tag)`
     width: 100px !important;
@@ -10,9 +10,10 @@ const EllipsisTag = styled(Tag)`
 `;
 
 
-export const TagPage = () => {
+export const TagGrids = () => {
     return (
-        <Page title="Tag 标签" done>
+        <>
+            <Grid title="Tag 标签" beforeGrid={<p>标签是页面上最常使用的点缀方式，用户可以通过色彩区域快速聚焦到所需的信息。</p>} />
             <Grid title="基础标签" repeat={2}>
                 <Tag type="flat">标签</Tag>
                 <EllipsisTag type="flat">标签文字很多放不下</EllipsisTag>
@@ -140,6 +141,6 @@ export const TagPage = () => {
                 <Tag round icon={<IconLogo />} color="gold" type="text-default">标签</Tag>
                 <Tag disabled icon={<IconLogo />} color="gold" type="primary">标签</Tag>
             </Grid>
-        </Page>
+        </>
     );
 };

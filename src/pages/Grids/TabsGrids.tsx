@@ -1,10 +1,16 @@
 import {Tabs} from 'antd';
-import {Grid, Page, ColumnTitle} from '@/components';
+import {Grid, ColumnTitle} from '@/components';
 
-export const TabsPage = () => {
+export const TabsGrids = () => {
     return (
-        <Page title="Tabs 标签页" status="开发中">
-            <div>需要解决与 Table 相互冲突的问题</div>
+        <>
+            <Grid title="Tabs 标签页">
+                <div>
+                    <p>Tabs 可能会作为布局的一部分进行介绍</p>
+                    <br />
+                    <p>需要解决与 Table 相互冲突的问题</p>
+                </div>
+            </Grid>
             <Grid title="基础样式" repeat={1}>
                 <div>默认</div>
                 <Tabs>
@@ -33,7 +39,6 @@ export const TabsPage = () => {
                     <Tabs.TabPane key="3" tab="标签" />
                 </Tabs>
             </Grid>
-
-        </Page>
+        </>
     );
 };

@@ -12,7 +12,7 @@ const PackageLink = createLink('https://github.com/dancerphil/react-router-templ
 
 export const LinkPage = () => {
     return (
-        <Page title="Link 超链接" done>
+        <Page title="4. Link 超链接">
             <div>
                 <p>
                     一般情况下，Link 经常需要和 react-router-dom 配合使用，所以我们没有在 panda-design 导出 Link 组件，你可以

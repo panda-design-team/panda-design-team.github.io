@@ -5390,10 +5390,10 @@ g-status@^2.0.2:
     matcher "^1.0.0"
     simple-git "^1.85.0"
 
-gaussian-background-generator@^0.0.1-alpha.1:
-  version "0.0.1-alpha.1"
-  resolved "https://registry.yarnpkg.com/gaussian-background-generator/-/gaussian-background-generator-0.0.1-alpha.1.tgz#97c724aad2446f05f1b66d62e5fa77784fef6f6d"
-  integrity sha512-d8cRKT3g1fubvOJfYG8L6CRDBorLojBqICoylcoYu20wOS17xN4Dv3ydzhpFa6SHQOw108tfbHRAKdQf64UKTA==
+gaussian-background-generator@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/gaussian-background-generator/-/gaussian-background-generator-0.0.1.tgz#422fc8c8b31c4f7ab2d3160bb989390cfde4b279"
+  integrity sha512-gaiEDeZWB5ylxKy58YhzyeJUTFM8Bqbu3wigJvI3b5Vkyr5HMXI+qn/KAZBmBuMFDfdNGFqtkx4uaeGT6q+clg==
 
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"

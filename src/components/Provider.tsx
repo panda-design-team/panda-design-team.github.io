@@ -12,7 +12,7 @@ function Provider({children}: Props) {
     return (
         <ConfigProvider
             autoInsertSpaceInButton={false}
-            // TODO 看起来修改 theme 会导致 unmount
+            // TODO 待 antd 修复
             theme={themeType === 'panda' ? theme : undefined}
         >
             {children}

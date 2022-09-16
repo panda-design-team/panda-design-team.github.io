@@ -1,27 +1,17 @@
-// TODO 等 antd@5 支持并发模式
-import {render} from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import 'antd/dist/reset.css';
 import '@panda-design/components/style';
 import {resetStyle} from '@/components/theme';
 import Provider from '@/components/Provider';
 import {PrefacePage} from '@/pages/PrefacePage';
 import {ColorPage} from '@/pages/ColorPage';
-import {TypographyPage} from '@/pages/TypographyPage';
+import {LayoutPage} from '@/pages/LayoutPage';
 import {ButtonPage} from '@/pages/ButtonPage';
 import {LinkPage} from '@/pages/LinkPage';
+import {BodyPage} from '@/pages/BodyPage';
 import {FormPage} from '@/pages/FormPage';
-import {TabsPage} from '@/pages/TabsPage';
-import {LayoutPage} from '@/pages/LayoutPage';
-import {GridPage} from '@/pages/GridPage';
-import {TagPage} from '@/pages/TagPage';
-import {SwitchPage} from '@/pages/SwitchPage';
-import {CheckboxPage} from '@/pages/CheckboxPage';
-import {RadioPage} from '@/pages/RadioPage';
-import {TablePage} from '@/pages/TablePage';
-import {AlertPage} from '@/pages/AlertPage';
-import {MessagePage} from '@/pages/MessagePage';
-import {PaginationPage} from '@/pages/PaginationPage';
-import {GaussianBackgroundPage} from '@/pages/GaussianBackgroundPage';
+import {DecorationPage} from '@/pages/DecorationPage';
+import {AnimationPage} from '@/pages/AnimationPage';
 import '@/panda-design/style/patch-antd.global.less';
 
 resetStyle();
@@ -30,29 +20,23 @@ const App = () => (
     <Provider>
         <PrefacePage />
         <ColorPage />
-        <TypographyPage />
+        <LayoutPage />
         <ButtonPage />
         <LinkPage />
+        <BodyPage />
         <FormPage />
-        <TabsPage />
-        <LayoutPage />
-        <GridPage />
-        <TagPage />
-        <SwitchPage />
-        <CheckboxPage />
-        <RadioPage />
-        <TablePage />
-        <AlertPage />
-        <MessagePage />
-        <PaginationPage />
-        <GaussianBackgroundPage />
+        <DecorationPage />
+        <AnimationPage />
     </Provider>
 );
 
-const root = document.createElement('div');
+const rootElement = document.createElement('div');
 
-// TODO 加这个是为了提高优先级，但是这个有点不太能接受，看看 antd@5 有没有更好的方案
-root.setAttribute('id', 'panda-holder');
+// TODO 待 antd 完成 layer 后移除
+rootElement.setAttribute('id', 'panda-holder');
 
-document.body.appendChild(root);
-render(<App />, root);
+document.body.appendChild(rootElement);
+
+const root = createRoot(rootElement);
+
+root.render(<App />);
