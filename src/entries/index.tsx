@@ -1,5 +1,5 @@
 import {createRoot} from 'react-dom/client';
-import 'antd/dist/reset.css';
+// import 'antd/dist/reset.css'; // 不需要
 import '@panda-design/components/style';
 import {resetStyle} from '@/components/theme';
 import Provider from '@/components/Provider';
@@ -12,7 +12,7 @@ import {BodyPage} from '@/pages/BodyPage';
 import {FormPage} from '@/pages/FormPage';
 import {DecorationPage} from '@/pages/DecorationPage';
 import {AnimationPage} from '@/pages/AnimationPage';
-import '@/panda-design/style/patch-antd.global.less';
+import './extra.global.less';
 
 resetStyle();
 
@@ -31,9 +31,6 @@ const App = () => (
 );
 
 const rootElement = document.createElement('div');
-
-// TODO 待 antd 完成 layer 后移除
-rootElement.setAttribute('id', 'panda-holder');
 
 document.body.appendChild(rootElement);
 

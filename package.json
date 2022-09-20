@@ -8,6 +8,7 @@
     "build": "skr build --build-target=stable --clean",
     "test": "skr test --",
     "lint": "skr lint",
+    "lint-type": "tsc",
     "deploy": "yarn build && gh-pages -d dist",
     "postinstall": "patch-package"
   },
@@ -18,7 +19,7 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@panda-design/components": "^0.0.9",
-    "antd": "^5.0.0-experimental.23",
+    "antd": "^5.0.0-experimental.25",
     "gaussian-background-generator": "^0.0.1",
     "lodash": "^4.17.21",
     "react": "^18.2.0",

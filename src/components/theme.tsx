@@ -12,20 +12,16 @@ export const theme: ThemeConfig = {
         radiusBase: 2,
         // motionBase: 0,
         // motionUnit: 0,
+
+        // alias
+        colorSplit: 'transparent',
     },
-    override: {
-        derivative: {
-        },
-        alias: {
-            colorSplit: 'transparent',
-            // colorBgContainerSecondary: 'transparent',
-        },
+    components: {
         // 调整默认阴影
         Button: {},
         // 调整 padding
         Tabs: {},
     },
-    hashed: true,
 };
 
 export const resetStyle = () => {
