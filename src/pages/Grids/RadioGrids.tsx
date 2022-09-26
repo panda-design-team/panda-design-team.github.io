@@ -1,5 +1,5 @@
 import {Radio, Space} from 'antd';
-import {ColumnTitle, Grid} from '@/components';
+import {ColumnTitle, Grid} from '@/components/Grid';
 
 export const RadioGrids = () => {
     return (

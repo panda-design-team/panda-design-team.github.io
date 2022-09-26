@@ -1,4 +1,4 @@
-import {Page} from '@/components';
+import {Page} from '@/components/Page';
 import {TagGrids} from '@/pages/Grids/TagGrids';
 import {AlertGrids} from '@/pages/Grids/AlertGrids';
 import {MessageGrids} from '@/pages/Grids/MessageGrids';

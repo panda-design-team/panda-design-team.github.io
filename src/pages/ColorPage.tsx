@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import {ColorLevel, colors, ColorType} from '@panda-design/components';
-import {Page, Grid} from '@/components';
+import {Page} from '@/components/Page';
+import {Grid} from '@/components/Grid';
 import {isLight} from '@/utils';
 
 const ColorItem = styled.div<{color: string}>`

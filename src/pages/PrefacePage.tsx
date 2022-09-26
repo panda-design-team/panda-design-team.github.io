@@ -75,7 +75,7 @@ export const PrefacePage = () => {
                 </p>
                 <p>在此篇文档中，我们会依次介绍 Panda Design 的 Color 色彩、Layout 布局、Button 按钮、Link 超链接、Body 页面主体、Form 表单、Decoration 装饰、Animation 动态效果。每个部分会包含数个组件。部分规范还在定制中，并非最终定稿。</p>
                 <br />
-                <p>你看到的这份规范基于 <Code>antd@5.0.0-experimental.23</Code>，并非最终定稿。</p>
+                <p>你看到的这份规范基于 <Code>antd@5.0.0-experimental.25</Code>，并非最终定稿。</p>
             </div>
         </StyledGaussianBackground>
     );

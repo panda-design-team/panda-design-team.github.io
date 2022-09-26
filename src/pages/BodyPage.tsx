@@ -1,4 +1,4 @@
-import {Page} from '@/components';
+import {Page} from '@/components/Page';
 import {TabsGrids} from '@/pages/Grids/TabsGrids';
 import {PaginationGrids} from '@/pages/Grids/PaginationGrids';
 

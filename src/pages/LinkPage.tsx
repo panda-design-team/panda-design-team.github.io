@@ -1,4 +1,5 @@
-import {Page, ColumnTitle, Grid} from '@/components';
+import {Page} from '@/components/Page';
+import {ColumnTitle, Grid} from '@/components/Grid';
 import {createLink, Link, LinkWithDisabledReason} from '@/components/Link';
 
 interface Params {

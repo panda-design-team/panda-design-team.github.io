@@ -1,5 +1,6 @@
 import {Typography} from 'antd';
-import {Page, Grid} from '@/components';
+import {Page} from '@/components/Page';
+import {Grid} from '@/components/Grid';
 
 export const LayoutPage = () => {
     return (

@@ -1,5 +1,5 @@
 import {Alert} from 'antd';
-import {Grid, ColumnTitle} from '@/components';
+import {Grid, ColumnTitle} from '@/components/Grid';
 
 export const AlertGrids = () => {
     return (

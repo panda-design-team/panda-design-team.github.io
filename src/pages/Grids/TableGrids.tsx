@@ -1,5 +1,5 @@
 import {Table} from 'antd';
-import {Grid} from '@/components';
+import {Grid} from '@/components/Grid';
 
 const dataSource = [
     {

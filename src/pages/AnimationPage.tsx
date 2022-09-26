@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import {Layer} from 'gaussian-background-generator';
-import {Page, Grid} from '@/components';
+import {Page} from '@/components/Page';
+import {Grid} from '@/components/Grid';
 import GaussianBackground from '@/components/GaussianBackground';
 
 const layersBlue: Layer[] = [

@@ -1,6 +1,7 @@
 import {Button as AntButton} from 'antd';
 import {Button, IconLogo} from '@panda-design/components';
-import {Page, ColumnTitle, Grid, RowTitle} from '@/components';
+import {Page} from '@/components/Page';
+import {ColumnTitle, Grid, RowTitle} from '@/components/Grid';
 import {createLink} from '@/components/Link';
 
 const DocLink = createLink('https://github.com/panda-design-team/panda-design-team.github.io/blob/main/patches/README.md');

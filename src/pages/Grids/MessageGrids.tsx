@@ -1,6 +1,6 @@
 import {message} from 'antd';
 import {Button} from '@panda-design/components';
-import {Grid} from '@/components';
+import {Grid} from '@/components/Grid';
 
 export const MessageGrids = () => {
     /* eslint-disable react/jsx-no-bind */

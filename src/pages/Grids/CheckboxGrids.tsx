@@ -1,6 +1,6 @@
 import {Checkbox, Space} from 'antd';
 import styled from '@emotion/styled';
-import {Grid, ColumnTitle} from '@/components';
+import {Grid, ColumnTitle} from '@/components/Grid';
 
 const StyledGrid = styled(Grid)`
     .ant-checkbox-wrapper {
