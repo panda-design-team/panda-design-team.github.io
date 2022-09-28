@@ -5,6 +5,7 @@ import {IconLogo} from '@panda-design/components';
 import {createLink} from '@/components/Link';
 import GaussianBackground from '@/components/GaussianBackground';
 import {useThemeType, setThemeType} from '@/regions';
+import {Code} from '@/components/Typography';
 
 const layersLight: Layer[] = [
     {orbs: 4, radius: 20, maxVelocity: 0.2, color: '#ebf1ff'},
@@ -40,13 +41,6 @@ export const PageTitle = styled.div`
 const NpmLink = createLink('https://www.npmjs.com/package/@panda-design/components');
 
 const DemoLink = createLink('https://github.com/panda-design-team/panda-design-team.github.io');
-
-const Code = styled.code`
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.06);
-    font-size: 12px;
-    padding: 2px;
-`;
 
 export const PrefacePage = () => {
     const themeType = useThemeType();

@@ -20,6 +20,8 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@panda-design/components": "^0.0.9",
+    "@types/animejs": "^3.1.5",
+    "animejs": "^3.2.1",
     "antd": "^5.0.0-experimental.25",
     "gaussian-background-generator": "^0.0.1",
     "lodash": "^4.17.21",
