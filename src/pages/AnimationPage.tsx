@@ -1,8 +1,8 @@
 import anime from 'animejs';
-import {useEffect} from 'react';
+import {useEffect, useRef} from 'react';
 import styled from '@emotion/styled';
 import {Page} from '@/components/Page';
-import {ProgressLineDown} from '@/components/Animate';
+// import {ProgressLineDown} from '@/components/Animate';
 import {GaussianBackgroundGrids} from '@/pages/Grids/GaussianBackgroundGrids';
 import Arrow from '@/svg/arrow.svg?react';
 import {Grid} from '@/components/Grid';
@@ -12,15 +12,19 @@ const ArrowContainer = styled.div`
 `;
 
 const AnimeTest = () => {
+    const ref = useRef<boolean>();
     useEffect(
         () => {
-            anime({
-                targets: '.el',
-                opacity: [0.1, 0.2, 0.1],
-                delay: anime.stagger(100, {grid: [5, 5], axis: 'y'}),
-                easing: 'linear',
-                loop: true,
-            });
+            if (!ref.current) {
+                anime({
+                    targets: '.el',
+                    opacity: [0.1, 0.2, 0.1],
+                    delay: anime.stagger(100, {grid: [5, 5], axis: 'y'}),
+                    easing: 'linear',
+                    loop: true,
+                });
+                ref.current = true;
+            }
         },
         []
     );
@@ -37,7 +41,7 @@ const AnimeTest = () => {
 export const AnimationPage = () => {
     return (
         <Page title="8. Animation 动画效果">
-            <ProgressLineDown />
+            {/* <ProgressLineDown /> */}
             <AnimeTest />
             <GaussianBackgroundGrids />
         </Page>

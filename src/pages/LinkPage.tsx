@@ -25,8 +25,9 @@ export const LinkPage = () => {
                 <p>更多配置请前往 <PackageLink>react-router-template-link</PackageLink></p>
             </div>
             <Grid
-                repeat={4}
                 title="超链接"
+                fitContent
+                repeat={4}
             >
                 <ColumnTitle>默认 / 悬浮 / 点击</ColumnTitle>
                 <ColumnTitle>文字</ColumnTitle>

@@ -1,9 +1,8 @@
-import {Switch} from 'antd';
 import {Page} from '@/components/Page';
-import {ColumnTitle, Grid} from '@/components/Grid';
 import {Code} from '@/components/Typography';
 import {ParagraphExtra} from '@/components/ParagraphExtra';
 import CheckCardGrids from '@/pages/Grids/CheckCardGrids';
+import {FormGrids} from './Grids/FormGrids';
 import {CheckboxGrids} from './Grids/CheckboxGrids';
 import {RadioGrids} from './Grids/RadioGrids';
 
@@ -25,14 +24,7 @@ export const FormPage = () => {
                 <br />
                 <p>而说到表单域的特征，由 <Code>Form.Item</Code> 所规定的结构，加上对应的表单控件构成。</p>
             </div>
-            <Grid title="Switch 开关">
-                <ColumnTitle>默认 / 悬浮 / 点击</ColumnTitle>
-                <ColumnTitle>禁用</ColumnTitle>
-                <ColumnTitle>禁用（关闭）</ColumnTitle>
-                <Switch />
-                <Switch checked disabled />
-                <Switch checked={false} disabled />
-            </Grid>
+            <FormGrids />
             <CheckboxGrids />
             <RadioGrids />
             <CheckCardGrids />

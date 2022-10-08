@@ -1,13 +1,14 @@
 import {injectGlobal} from '@emotion/css';
 import {ThemeConfig} from 'antd/es/config-provider/context';
+import {colors} from '@panda-design/components';
 
 export const theme: ThemeConfig = {
     token: {
-        colorPrimary: '#000',
-        colorSuccess: '#40b333',
-        colorWarning: '#f27c49',
-        colorError: '#e64552',
-        colorInfo: '#317ff5',
+        colorPrimary: colors['gray-10'],
+        colorSuccess: colors['success-6'],
+        colorWarning: colors['warning-6'],
+        colorError: colors['error-6'],
+        colorInfo: colors['brand-6'],
         fontSizeBase: 14,
         radiusBase: 2,
         // motionBase: 0,
@@ -15,12 +16,21 @@ export const theme: ThemeConfig = {
 
         // alias
         colorSplit: 'transparent',
+        // Button
+        controlOutline: 'transparent',
+        // Table
+        colorFillAlter: 'transparent',
     },
     components: {
-        // 调整默认阴影
-        Button: {},
         // 调整 padding
-        Tabs: {},
+        Tabs: {
+            // fontSize: 14,
+            // fontSizeSM: 14,
+            // fontSizeBase: 16,
+            // fontSizeLG: 20,
+            // // @ts-ignore
+            // tabsActiveTextShadow: 'none',
+        },
     },
 };
 
