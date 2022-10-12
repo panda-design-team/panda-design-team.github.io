@@ -1760,10 +1760,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@panda-design/components@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@panda-design/components/-/components-0.0.9.tgz#97794f20c14c068b83be7ecb4ede25c5c1418cda"
-  integrity sha512-jv78M2SM1o2PLLX0qUVzX1ASnyy9BK+q+Wy4Eyxnmx0bphDImTLdFl+6y047xwUnxGvL21iat8xnl5kRe5nVIw==
+"@panda-design/components@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@panda-design/components/-/components-0.0.10.tgz#59c88ee162b42ccd44ea23345e3cb13fa9a9bc7a"
+  integrity sha512-94v71o4EeiUT0a9JsthBCejCD0ITuoCPFL75BLJLrBm5gcP57a6vKQOJaaBzcUYgwB4LLCc7LV+p6YaIXYGJew==
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.6":
   version "0.5.7"

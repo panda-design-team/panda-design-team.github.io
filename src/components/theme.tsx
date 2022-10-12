@@ -20,6 +20,8 @@ export const theme: ThemeConfig = {
         controlOutline: 'transparent',
         // Table
         colorFillAlter: 'transparent',
+        // message 不生效？
+        // radiusLG: 2,
     },
     components: {
         // 调整 padding

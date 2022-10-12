@@ -19,7 +19,7 @@
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@panda-design/components": "^0.0.9",
+    "@panda-design/components": "^0.0.10",
     "@types/animejs": "^3.1.5",
     "animejs": "^3.2.1",
     "antd": "^5.0.0-alpha.0",
