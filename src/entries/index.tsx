@@ -1,5 +1,5 @@
 import {createRoot} from 'react-dom/client';
-// import 'antd/dist/reset.css'; // 不需要
+import 'antd/dist/reset.css';
 import '@panda-design/components/style';
 import {resetStyle} from '@/components/theme';
 import Provider from '@/components/Provider';
