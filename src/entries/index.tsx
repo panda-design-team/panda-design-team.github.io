@@ -1,6 +1,6 @@
 import {createRoot} from 'react-dom/client';
 import 'antd/dist/reset.css';
-import '@panda-design/components/style';
+import {appendStyle} from '@panda-design/components';
 import {resetStyle} from '@/components/theme';
 import Provider from '@/components/Provider';
 import {PrefacePage} from '@/pages/PrefacePage';
@@ -15,6 +15,7 @@ import {AnimationPage} from '@/pages/AnimationPage';
 import './extra.global.less';
 
 resetStyle();
+appendStyle();
 
 const App = () => (
     <Provider>

@@ -10,7 +10,12 @@ export const theme: ThemeConfig = {
         colorError: colors['error-6'],
         colorInfo: colors['brand-6'],
         fontSizeBase: 14,
+        // TODO massage 未生效
         radiusBase: 2,
+        radiusXS: 2,
+        radiusSM: 2,
+        radiusLG: 2,
+        radiusOuter: 2,
         // motionBase: 0,
         // motionUnit: 0,
 
@@ -20,20 +25,13 @@ export const theme: ThemeConfig = {
         controlOutline: 'transparent',
         // Table
         colorFillAlter: 'transparent',
-        // message 不生效？
-        // radiusLG: 2,
+        // Select
+        controlItemBgActive: colors['gray-3'],
     },
     components: {
         // 调整 padding
-        Tabs: {
-            // fontSize: 14,
-            // fontSizeSM: 14,
-            // fontSizeBase: 16,
-            // fontSizeLG: 20,
-            // // @ts-ignore
-            // tabsActiveTextShadow: 'none',
-        },
     },
+    // algorithm: defaultAlgorithmV4,
 };
 
 export const resetStyle = () => {

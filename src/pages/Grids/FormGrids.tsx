@@ -26,7 +26,7 @@ export const FormGrids = () => {
                     </Form.Item>
                     <Form.Item label="Checkbox 多选框">
                         <Checkbox>选项</Checkbox>
-                        <Checkbox indeterminate>选项</Checkbox>
+                        <Checkbox indeterminate checked={false}>选项</Checkbox>
                     </Form.Item>
                     <Form.Item label="Radio 单选框">
                         <Radio>选项</Radio>

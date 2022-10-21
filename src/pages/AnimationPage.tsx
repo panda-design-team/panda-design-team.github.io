@@ -2,10 +2,11 @@ import anime from 'animejs';
 import {useEffect, useRef} from 'react';
 import styled from '@emotion/styled';
 import {Page} from '@/components/Page';
-// import {ProgressLineDown} from '@/components/Animate';
+import {ProgressLineDown} from '@/components/Animate';
 import {GaussianBackgroundGrids} from '@/pages/Grids/GaussianBackgroundGrids';
 import Arrow from '@/svg/arrow.svg?react';
 import {Grid} from '@/components/Grid';
+import {useRoleType} from '@/regions';
 
 const ArrowContainer = styled.div`
     opacity: 0.1;
@@ -39,10 +40,11 @@ const AnimeTest = () => {
 };
 
 export const AnimationPage = () => {
+    const roleType = useRoleType();
     return (
         <Page title="8. Animation 动画效果">
-            {/* <ProgressLineDown /> */}
-            <AnimeTest />
+            {roleType === '组件库开发' && <ProgressLineDown />}
+            {roleType === '组件库开发' && <AnimeTest />}
             <GaussianBackgroundGrids />
         </Page>
     );

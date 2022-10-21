@@ -12,8 +12,8 @@ function Provider({children}: Props) {
     return (
         <ConfigProvider
             autoInsertSpaceInButton={false}
-            // TODO 待 antd 修复
-            theme={themeType === 'panda' ? theme : undefined}
+            // NOTE antd 不支持 undefined 切换
+            theme={themeType === 'panda' ? theme : {}}
         >
             {children}
         </ConfigProvider>

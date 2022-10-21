@@ -49,16 +49,16 @@ export const GaussianBackgroundGrids = () => {
     return (
         <Grid title="Gaussian Background 呼吸背景" repeat={2}>
             <StyledGaussianBackground>
-                静待发布
+                描述文字
             </StyledGaussianBackground>
             <StyledGaussianBackground layers={layersBlue}>
-                静待发布
+                描述文字
             </StyledGaussianBackground>
             <StyledGaussianBackground layers={layersRed}>
-                静待发布
+                描述文字
             </StyledGaussianBackground>
             <StyledGaussianBackground layers={layersPurple}>
-                静待发布
+                描述文字
             </StyledGaussianBackground>
         </Grid>
     );

@@ -1178,7 +1178,7 @@
     "@babel/helper-validator-option" "^7.16.7"
     "@babel/plugin-transform-typescript" "^7.17.12"
 
-"@babel/runtime@^7.10.1", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.7.6":
+"@babel/runtime@^7.10.1", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.6.tgz#6a1ef59f838debd670421f8c7f2cbb8da9751580"
   integrity sha512-t9wi7/AW6XtKahAe20Yw0/mMljKq0B1r2fPdvaAdV/KPDZewFXdaaa6K7lxmZBZ8FBNpCiAT6iHPmd6QO9bKfQ==
@@ -1767,10 +1767,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@panda-design/components@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@panda-design/components/-/components-0.0.10.tgz#59c88ee162b42ccd44ea23345e3cb13fa9a9bc7a"
-  integrity sha512-94v71o4EeiUT0a9JsthBCejCD0ITuoCPFL75BLJLrBm5gcP57a6vKQOJaaBzcUYgwB4LLCc7LV+p6YaIXYGJew==
+"@panda-design/components@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@panda-design/components/-/components-0.0.19.tgz#13eda572f5f2764188f7f48536f50ccc1d8e96c5"
+  integrity sha512-Jb2FuyavgGF+zi2tS9in1m2R2fSJKs9SvCqjMyK07MYHPqaOdEBr9gFb1n6UdhTmassYGQHZUeOxzwc5BpqlpQ==
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.6":
   version "0.5.7"
@@ -1800,6 +1800,11 @@
     "@babel/runtime" "^7.18.0"
     classnames "^2.3.2"
     rc-util "^5.8.0"
+
+"@remix-run/router@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.2.tgz#1c17eadb2fa77f80a796ad5ea9bf108e6993ef06"
+  integrity sha512-GRSOFhJzjGN+d4sKHTMSvNeUPoZiDHWmRnXfzaxrqe7dE/Nzlc8BiMSJdLDESZlndM7jIUrZ/F4yWqVYlI0rwQ==
 
 "@reskript/babel-plugin-add-react-display-name@5.3.0":
   version "5.3.0"
@@ -5763,13 +5768,6 @@ header-case@^2.0.4:
     capital-case "^1.0.4"
     tslib "^2.0.3"
 
-history@^5.2.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/history/-/history-5.3.0.tgz#1548abaa245ba47992f063a0783db91ef201c73b"
-  integrity sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==
-  dependencies:
-    "@babel/runtime" "^7.7.6"
-
 hoist-non-react-statics@^3.3.1:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
@@ -9284,27 +9282,27 @@ react-refresh@^0.13.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.13.0.tgz#cbd01a4482a177a5da8d44c9755ebb1f26d5a1c1"
   integrity sha512-XP8A9BT0CpRBD+NYLLeIhld/RqG9+gktUjW1FkE+Vm7OCinbG1SshcK5tb9ls4kzvjZr9mOQc7HYgBngEyPAXg==
 
-react-router-dom@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.3.0.tgz#a0216da813454e521905b5fa55e0e5176123f43d"
-  integrity sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw==
+react-router-dom@^6.4.2:
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.4.2.tgz#115b37d501d6d8ac870683694978c51c43e6c0d2"
+  integrity sha512-yM1kjoTkpfjgczPrcyWrp+OuQMyB1WleICiiGfstnQYo/S8hPEEnVjr/RdmlH6yKK4Tnj1UGXFSa7uwAtmDoLQ==
   dependencies:
-    history "^5.2.0"
-    react-router "6.3.0"
+    "@remix-run/router" "1.0.2"
+    react-router "6.4.2"
 
-react-router-template-link@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/react-router-template-link/-/react-router-template-link-2.1.2.tgz#f29a7ec55856b5909b7a543255326a92c4ed4bd4"
-  integrity sha512-mP95hGGGJiXDCOKCYbj5o9CunHNKzb2gCDFKAs4WUIVrnDWDlq9p8puFgoTibWMeshAcpagkU6toZ+MwLVcnfw==
+react-router-template-link@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-router-template-link/-/react-router-template-link-2.2.0.tgz#e67f6b30b0fbd979ed42d2a1a8c92d27ccc4e45e"
+  integrity sha512-Xd8m3P+NLkOyRPs4MbPD0AzC4aUg8L2ChxKCS3eSuLvkzdq6vRFB4eFJMqY+UyrT6EW05E0nDIqavHoPa7z2Gg==
   dependencies:
     query-string "^7.1.1"
 
-react-router@6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.3.0.tgz#3970cc64b4cb4eae0c1ea5203a80334fdd175557"
-  integrity sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==
+react-router@6.4.2:
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.4.2.tgz#300628ee9ed81b8ef1597b5cb98b474efe9779b8"
+  integrity sha512-Rb0BAX9KHhVzT1OKhMvCDMw776aTYM0DtkxqUBP8dNBom3mPXlfNs76JNGK8wKJ1IZEY1+WGj+cvZxHVk/GiKw==
   dependencies:
-    history "^5.2.0"
+    "@remix-run/router" "1.0.2"
 
 react-sortable-hoc@^2.0.0:
   version "2.0.0"
