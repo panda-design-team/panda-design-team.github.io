@@ -1,6 +1,7 @@
 import {ReactNode} from 'react';
 import styled from '@emotion/styled';
 import {css} from '@emotion/react';
+import {colors} from '@panda-design/components';
 
 const fitContentCss = css`
     width: fit-content;
@@ -46,11 +47,11 @@ export function Grid({title, className, beforeGrid, afterGrid, children, repeat 
 }
 
 export const ColumnTitle = styled.div`
-    color: var(--color-gray-8);
+    color: ${colors['gray-8']};
 `;
 
 export const RowTitle = styled.div`
     display: flex;
     align-items: center;
-    color: var(--color-gray-8);
+    color: ${colors['gray-8']};
 `;

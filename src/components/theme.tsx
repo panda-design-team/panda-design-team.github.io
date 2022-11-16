@@ -8,17 +8,18 @@ export const theme: ThemeConfig = {
         colorSuccess: colors['success-6'],
         colorWarning: colors['warning-6'],
         colorError: colors['error-6'],
-        colorInfo: colors['brand-6'],
-        fontSizeBase: 14,
-        // TODO massage 未生效
-        radiusBase: 2,
-        radiusXS: 2,
-        radiusSM: 2,
-        radiusLG: 2,
-        radiusOuter: 2,
+        colorInfo: colors['info-6'],
+        // fontSize: 14,
+        // TODO massage 没有在 Provider 下，暂时也没有提供配置
+        borderRadius: 2,
+        borderRadiusXS: 2,
+        borderRadiusSM: 2,
+        borderRadiusLG: 2,
+        borderRadiusOuter: 2,
         // motionBase: 0,
         // motionUnit: 0,
 
+        // 下面的变量需要测试调整
         // alias
         colorSplit: 'transparent',
         // Button
@@ -29,7 +30,23 @@ export const theme: ThemeConfig = {
         controlItemBgActive: colors['gray-3'],
     },
     components: {
-        // 调整 padding
+        Table: {
+            // colorFillAlter 的粒度不够细，加了以后 hover 的背景颜色也没了
+            // colorFillAlter: 'transparent',
+            padding: 10,
+            paddingContentVerticalLG: 10,
+        },
+        Tree: {
+            paddingXS: 0,
+            // 非规范
+            // colorPrimary: colors['info-2'],
+            // colorTextLightSolid: 'inherit',
+            // controlHeightSM: 28,
+        },
+        Tabs: {
+            // 还没提供
+            // tabsHorizontalGutter: 0,
+        },
     },
     // algorithm: defaultAlgorithmV4,
 };

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import {ReactNode, useLayoutEffect, useRef} from 'react';
+import {colors} from '@panda-design/components';
 
 const StyledParagraph = styled.p`
     flex: 1;
@@ -14,7 +15,7 @@ const Container = styled.div`
 
 const Layout = styled.div`
     flex: 1;
-    background-color: var(--color-gray-3);
+    background-color: ${colors['gray-3']};
 `;
 
 const Content = styled.div`
@@ -23,7 +24,7 @@ const Content = styled.div`
     position: absolute;
     left: 100px; // 留出50px
     right: 0;
-    background-color: var(--color-gray-1);
+    background-color: ${colors.white};
     
 `;
 

@@ -1,19 +1,11 @@
 import styled from '@emotion/styled';
+import {colors} from '@panda-design/components';
 
 export const ProgressLineDown = styled.div`
-
-    //background: repeating-linear-gradient(
-    //    -45deg,
-    //    var(--color-brand-3) 0,
-    //    var(--color-brand-3) 3px,
-    //    var(--color-brand-6) 0,
-    //    var(--color-brand-6) 9px
-    //);
-
     background: repeating-linear-gradient(
         -45deg,
-        var(--color-brand-3) 0,
-        var(--color-brand-3) 3px,
+        ${colors['info-3']} 0,
+        ${colors['info-3']} 3px,
         transparent 0,
         transparent 9px
     );

@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 import {CheckCard} from '@ant-design/pro-card';
+import {colors} from '@panda-design/components';
 import {Grid} from '@/components/Grid';
 
 const StyledCardGroup = styled(CheckCard.Group)`
-    --item-active-bg: var(--color-gray-1);
+    --item-active-bg: ${colors.white};
 
     &.ant-pro-checkcard-group {
         display: flex;
@@ -22,7 +23,7 @@ const StyledCardGroup = styled(CheckCard.Group)`
     }
     
     .ant-pro-checkcard-checked {
-        background-color: var(--color-gray-1);
+        background-color: ${colors.white};
     }
 `;
 

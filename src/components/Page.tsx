@@ -12,10 +12,10 @@ const PageTitle = styled.div<{disableShadow?: boolean}>`
     padding: 0 50px;
     font-size: 48px;
     height: 120px;
-    background-color: var(--color-gray-3);
+    background-color: ${colors['gray-3']};
     cursor: pointer;
     z-index: 2;
-    ${props => !props.disableShadow && `box-shadow: 0px -40px 40px ${colors['gray-1']};`}
+    ${props => !props.disableShadow && `box-shadow: 0px -40px 40px ${colors.white};`}
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

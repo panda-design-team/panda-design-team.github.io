@@ -15,7 +15,7 @@ import {AnimationPage} from '@/pages/AnimationPage';
 import './extra.global.less';
 
 resetStyle();
-appendStyle();
+appendStyle({antPrefixCls: 'ant5'});
 
 const App = () => (
     <Provider>
