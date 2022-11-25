@@ -85,8 +85,7 @@ export const PrefacePage = () => {
                 <p>Panda Design 基于 antd@5 开发的一套设计系统，旨在 Ant Design 的基础上覆盖更多场景。</p>
                 <p>这里是 Panda Design 的设计规范，规范主要会介绍到我们的一些理念，进一步的介绍组件以及它们的使用场景。</p>
                 <p>目前此规范和相关的组件库都还没有正式发布。我们将稍晚于 antd@5 发布我们的正式版本。当然，如果你需要，你可以在<NpmLink>这里</NpmLink>找到现有的 Panda Design 组件库，但考虑到可能的巨大变动，我们并不建议你使用。</p>
-                <p>在此，我并不想抢先发布 antd@5 相关的资讯。但 antd@5 的设计系统非常给力，使得我们可以畅想如何在其基础上构造我们的主题、自定义组件，并可以和 antd 以及其他的第三方自定义组件一起使用。</p>
-                <p>我们会尽可能的与 antd 原本的 api 兼容，让你可以很快速的在各个风格内切换，让风格切换成为一件令人愉悦的事情。</p>
+                <p>antd@5 的设计系统非常给力，使得我们可以畅想如何在其基础上构造我们的主题、自定义组件，并可以和 antd 以及其他的第三方自定义组件一起使用。我们会尽可能的与 antd 原本的 api 兼容，让你可以很快速的在各个风格内切换，让风格切换成为一件令人愉悦的事情。</p>
                 <p>这份规范的源代码可以在<DemoLink>这里</DemoLink>找到。</p>
                 <br />
                 <p>在此篇文档中，我们会依次介绍 Panda Design 的 Color 色彩、Layout 布局、Button 按钮、Link 超链接、Body 页面主体、Form 表单、Decoration 装饰、Animation 动态效果。每个部分会包含数个组件。部分规范还在定制中，并非最终定稿。</p>
@@ -117,7 +116,7 @@ export const PrefacePage = () => {
                 </p>
                 {roleText[roleType]}
                 <br />
-                <p>你看到的这份规范基于 <Code>antd@5.0.0-beta.2</Code>，并非最终定稿。</p>
+                <p>你看到的这份规范基于 <Code>antd@5.0.1</Code>，并非最终定稿。</p>
             </div>
         </StyledGaussianBackground>
     );

@@ -1,35 +1,75 @@
-import {injectGlobal} from '@emotion/css';
 import {ThemeConfig} from 'antd/es/config-provider/context';
 import {colors} from '@panda-design/components';
 
 export const theme: ThemeConfig = {
     token: {
+        // ---- SeedToken ----
         colorPrimary: colors['gray-10'],
         colorSuccess: colors['success-6'],
         colorWarning: colors['warning-6'],
         colorError: colors['error-6'],
         colorInfo: colors['info-6'],
-        // fontSize: 14,
-        // TODO massage 没有在 Provider 下，暂时也没有提供配置
+        // colorTextBase: undefined,
+        // colorBgBase: undefined,
         borderRadius: 2,
+        // font, line, motion, size, controlHeight, zIndex, opacityImage, wireframe 未列出，有需要可以自行研究
+
+        // ---- NeutralColorMapToken ----
+        // 暂时先保持 antd 规范，后续调整
+        // colorTextBase: string;
+        // colorBgBase: string;
+        // colorText: string;
+        // colorTextSecondary: string;
+        // colorTextTertiary: string;
+        // colorTextQuaternary: string;
+        // colorFill: string;
+        // colorFillSecondary: string;
+        // colorFillTertiary: string;
+        // colorFillQuaternary: string;
+        // colorBgContainer: string;
+        // colorBgElevated: string;
+        // colorBgLayout: string;
+        // colorBgSpotlight: string;
+        // colorBorder: string;
+        // colorBorderSecondary: string;
+
+        // ---- ColorMapToken ----
+        // 黑色系列全部定制
+        colorPrimaryBg: colors['gray-3'], // 1
+        colorPrimaryBgHover: colors['gray-3'], // 2
+        colorPrimaryBorder: colors['gray-4'], // 3
+        colorPrimaryBorderHover: colors['gray-10'], // 4 // 暂时只有 Slider 用了
+        colorPrimaryHover: colors['gray-10'], // 5
+        // colorPrimary: colors.black, // 6
+        colorPrimaryActive: colors['gray-10'], // 7
+        colorPrimaryTextHover: colors['gray-9'], // 8 // 不确定哪里用了
+        colorPrimaryText: colors['gray-10'], // 9 // 不确定哪里用了
+        colorPrimaryTextActive: colors['gray-9'], // 10 // 不确定哪里用了
+
+        // ---- CommonMapToken ----
+        // borderRadius 统一为 2
         borderRadiusXS: 2,
         borderRadiusSM: 2,
         borderRadiusLG: 2,
-        borderRadiusOuter: 2,
-        // motionBase: 0,
-        // motionUnit: 0,
+        // borderRadiusOuter: 2,
 
-        // 下面的变量需要测试调整
-        // alias
+        // ---- AliasToken ----
         colorSplit: 'transparent',
         // Button
         controlOutline: 'transparent',
         // Table
         colorFillAlter: 'transparent',
         // Select
-        controlItemBgActive: colors['gray-3'],
+        // colorPrimaryBg: colors['gray-3'],
     },
+    // 此部分 token 原则上还未确定，所以可能后续改动较大
     components: {
+        Button: {
+            // @ts-expect-error
+            controlHeightSM: 28,
+            controlHeight: 32,
+            controlHeightLG: 36,
+        },
         Table: {
             // colorFillAlter 的粒度不够细，加了以后 hover 的背景颜色也没了
             // colorFillAlter: 'transparent',
@@ -47,29 +87,10 @@ export const theme: ThemeConfig = {
             // 还没提供
             // tabsHorizontalGutter: 0,
         },
+        Menu: {
+            // marginXXS: 8,
+            padding: 20,
+        },
     },
     // algorithm: defaultAlgorithmV4,
-};
-
-export const resetStyle = () => {
-    // eslint-disable-next-line no-unused-expressions
-    injectGlobal`
-        html,
-        body {
-            padding: 0;
-            margin: 0;
-        }
-        
-        body {
-            font-feature-settings: "tnum","tnum";
-            background-color: #fff;
-            color: rgba(0,0,0,.85);
-            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-            font-size: 14px;
-            font-variant: tabular-nums;
-            line-height: 1.5715;
-            // additional
-            overflow-x: hidden;
-        }
-    `;
 };

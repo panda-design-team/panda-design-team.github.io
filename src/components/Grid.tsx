@@ -21,7 +21,6 @@ const GridContainer = styled.div<GridContainerProps>`
     grid-template-columns: repeat(${props => props.repeat ?? 3}, auto);
     column-gap: 30px;
     row-gap: 20px;
-    align-items: center;
     margin-top: 40px;
 
     ${props => props.fitContent && fitContentCss}

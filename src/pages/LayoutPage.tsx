@@ -1,6 +1,7 @@
 import {Typography} from 'antd';
 import {Page} from '@/components/Page';
 import {Grid} from '@/components/Grid';
+import {MenuGrids} from '@/pages/Grids/MenuGrids';
 
 export const LayoutPage = () => {
     return (
@@ -25,6 +26,7 @@ export const LayoutPage = () => {
                 <Typography.Text>正文</Typography.Text>
                 <Typography.Text type="secondary">辅助信息</Typography.Text>
             </Grid>
+            <MenuGrids />
         </Page>
     );
 };

@@ -1,7 +1,5 @@
 import {createRoot} from 'react-dom/client';
 import 'antd/dist/reset.css';
-import {appendStyle} from '@panda-design/components';
-import {resetStyle} from '@/components/theme';
 import Provider from '@/components/Provider';
 import {PrefacePage} from '@/pages/PrefacePage';
 import {ColorPage} from '@/pages/ColorPage';
@@ -12,10 +10,7 @@ import {BodyPage} from '@/pages/BodyPage';
 import {FormPage} from '@/pages/FormPage';
 import {DecorationPage} from '@/pages/DecorationPage';
 import {AnimationPage} from '@/pages/AnimationPage';
-import './extra.global.less';
-
-resetStyle();
-appendStyle({antPrefixCls: 'ant5'});
+import '@/styles';
 
 const App = () => (
     <Provider>
