@@ -116,7 +116,7 @@ export const PrefacePage = () => {
                 </p>
                 {roleText[roleType]}
                 <br />
-                <p>你看到的这份规范基于 <Code>antd@5.0.1</Code>，并非最终定稿。</p>
+                <p>你看到的这份规范基于 <Code>antd@5.1.1</Code>，并非最终定稿。</p>
             </div>
         </StyledGaussianBackground>
     );

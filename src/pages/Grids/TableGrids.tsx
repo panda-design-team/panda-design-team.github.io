@@ -37,7 +37,7 @@ const columns = [
 export const TableGrids = () => {
     return (
         <>
-            <Grid title="Table 表格" beforeGrid={<p>需要解决与 Tabs 相互冲突的问题</p>} repeat={1}>
+            <Grid title="Table 表格" repeat={1}>
                 <Table
                     columns={columns}
                     dataSource={dataSource}

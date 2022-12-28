@@ -1,7 +1,7 @@
 import {ConfigProvider} from 'antd';
 import {ReactNode} from 'react';
+import {theme} from '@panda-design/components';
 import {useThemeType} from '@/regions';
-import {theme} from './theme';
 
 ConfigProvider.config({prefixCls: 'ant5'});
 
