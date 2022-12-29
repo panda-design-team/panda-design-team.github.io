@@ -1776,10 +1776,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@panda-design/components@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@panda-design/components/-/components-0.0.41.tgz#c6fc68432baa7c77a7e8576863d76b65fb5ab3a0"
-  integrity sha512-I1qRMXdRcI15/hD0IaNdud5N755i6hUrAxCKtLbnFbxTegv70eNSwaOYbKGI00KddIs8NSFFAxWCvKEF8JIMtw==
+"@panda-design/components@^0.0.42":
+  version "0.0.42"
+  resolved "https://registry.yarnpkg.com/@panda-design/components/-/components-0.0.42.tgz#bbae9bdcbfa8a5f6ac6b0150065cdb6a0692978c"
+  integrity sha512-QwcLRpFGCpuvmY4fFz9QEKPEcw0UtKirjHdd0gZUot2ccYk8H8cuceD9cG42qdDe1YA1mdsScKIwpdCPmKrVNg==
   dependencies:
     use-sync-external-store "^1.2.0"
 

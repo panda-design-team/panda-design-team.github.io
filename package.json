@@ -19,7 +19,7 @@
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@panda-design/components": "^0.0.41",
+    "@panda-design/components": "^0.0.42",
     "animejs": "^3.2.1",
     "antd": "^5.1.1",
     "gaussian-background-generator": "^0.0.1",
