@@ -1,24 +1,26 @@
 import styled from '@emotion/styled';
-import {Layer} from 'gaussian-background-generator';
+import {GaussianBackground, GaussianBackgroundLayer} from '@panda-design/extra';
 import {Grid} from '@/components/Grid';
-import GaussianBackground from '@/components/GaussianBackground';
 
-const layersBlue: Layer[] = [
-    {
-        color: '#0147fe',
-        orbs: 8,
-        radius: 8,
-        maxVelocity: 0.2,
-    },
-    {
-        color: '#298eff',
-        orbs: 6,
-        radius: 6,
-        maxVelocity: 0.2,
-    },
-    {
-        color: '#5de3ff',
-    },
+const layersLightColorful: GaussianBackgroundLayer[] = [
+    {orbs: 4, radius: 20, maxVelocity: 0.2, color: '#fff'},
+    {orbs: 8, radius: 10, maxVelocity: 0.5, color: '#0ff'},
+    {orbs: 8, radius: 10, maxVelocity: 0.5, color: '#f0f'},
+    {orbs: 8, radius: 10, maxVelocity: 0.5, color: '#ff0'},
+    // {color: '#000'},
+];
+
+const layersDarkColorful: GaussianBackgroundLayer[] = [
+    {color: '#2f54eb', orbs: 4, radius: 16, maxVelocity: 0.2},
+    {color: '#1890ff', orbs: 4, radius: 8, maxVelocity: 0.2},
+    {color: '#fadb14'},
+];
+
+const layersBlue: GaussianBackgroundLayer[] = [
+    {orbs: 4, radius: 20, maxVelocity: 0.2, color: '#245ca7', columns: 2},
+    {orbs: 5, radius: 15, maxVelocity: 0.2, color: '#2176c7'},
+    {orbs: 7, radius: 12, maxVelocity: 0.2, color: '#149dee'},
+    {color: '#b6d7fd'},
 ];
 
 const layersPurple = [
@@ -35,29 +37,35 @@ const layersRed = [
     {color: '#f4b685'},
 ];
 
-const StyledGaussianBackground = styled(GaussianBackground)`
+const StyledGaussianBackground = styled(GaussianBackground)<{ghost?: boolean}>`
     width: 300px;
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     border-radius: 4px;
+    ${props => props.ghost && 'color: white'};
 `;
 
 export const GaussianBackgroundGrids = () => {
     return (
-        <Grid title="Gaussian Background 呼吸背景" repeat={2}>
+        <Grid title="Gaussian Background 呼吸背景 (Unstable)" repeat={3}>
             <StyledGaussianBackground>
                 描述文字
             </StyledGaussianBackground>
-            <StyledGaussianBackground layers={layersBlue}>
+            <StyledGaussianBackground layers={layersLightColorful}>
                 描述文字
             </StyledGaussianBackground>
-            <StyledGaussianBackground layers={layersRed}>
+            <StyledGaussianBackground ghost layers={layersDarkColorful}>
                 描述文字
             </StyledGaussianBackground>
-            <StyledGaussianBackground layers={layersPurple}>
+            <StyledGaussianBackground ghost layers={layersBlue}>
+                描述文字
+            </StyledGaussianBackground>
+            <StyledGaussianBackground ghost layers={layersRed}>
+                描述文字
+            </StyledGaussianBackground>
+            <StyledGaussianBackground ghost layers={layersPurple}>
                 描述文字
             </StyledGaussianBackground>
         </Grid>

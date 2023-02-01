@@ -1,22 +1,15 @@
 import {ReactNode} from 'react';
 import styled from '@emotion/styled';
 import {Segmented, Space} from 'antd';
-import {Layer} from 'gaussian-background-generator';
 import {IconLogo} from '@panda-design/components';
+import {GaussianBackground} from '@panda-design/extra';
+import {trimStart} from 'lodash';
 import {createLink} from '@/components/Link';
-import GaussianBackground from '@/components/GaussianBackground';
 import {useThemeType, setThemeType, useRoleType, setRoleType, Role} from '@/regions';
 import {Code} from '@/components/Typography';
+import packageJson from '../../package.json';
 
-const layersLight: Layer[] = [
-    {orbs: 4, radius: 20, maxVelocity: 0.2, color: '#ebf1ff'},
-    {orbs: 5, radius: 15, maxVelocity: 0.2, color: '#cfddff'},
-    {orbs: 6, radius: 10, maxVelocity: 0.2, color: '#e6f9ff'},
-    {orbs: 6, radius: 9, maxVelocity: 0.2, color: '#f8edff'},
-    {orbs: 6, radius: 8, maxVelocity: 0.2, color: '#ffebf4'},
-    {orbs: 6, radius: 7, maxVelocity: 0.2, color: '#fff8e0'},
-    {color: '#fff'},
-];
+const {dependencies} = packageJson;
 
 const StyledGaussianBackground = styled(GaussianBackground)`
     padding: 100px 50px 100px 50px;
@@ -79,7 +72,7 @@ export const PrefacePage = () => {
     const roleType = useRoleType();
 
     return (
-        <StyledGaussianBackground layers={layersLight}>
+        <StyledGaussianBackground>
             <PageTitle><StyledIconLogo />Panda Design</PageTitle>
             <div>
                 <p>Panda Design 基于 antd@5 开发的一套设计系统，旨在 Ant Design 的基础上覆盖更多场景。</p>
@@ -116,7 +109,13 @@ export const PrefacePage = () => {
                 </p>
                 {roleText[roleType]}
                 <br />
-                <p>你看到的这份规范基于 <Code>antd@5.1.1</Code>，并非最终定稿。</p>
+                <p>
+                    {'你看到的这份规范基于 '}
+                    <Code>antd@{trimStart(dependencies.antd, '^')}</Code>
+                    {' 与 '}
+                    <Code>@panda-design/components@{trimStart(dependencies['@panda-design/components'], '^')}</Code>
+                    ，并非最终定稿。
+                </p>
             </div>
         </StyledGaussianBackground>
     );

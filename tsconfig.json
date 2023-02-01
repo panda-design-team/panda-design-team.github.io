@@ -29,7 +29,8 @@
         "noUncheckedIndexedAccess": false,
         "noUnusedLocals": true,
         "noUnusedParameters": false,
-        "useUnknownInCatchVariables": false
+        "useUnknownInCatchVariables": false,
+        "resolveJsonModule": true
     },
     "include": [
         "src",
