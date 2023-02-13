@@ -46,8 +46,8 @@ export const ButtonGrids = () => {
                 <Button type="primary" size="small">主要按钮</Button>
                 <Button type="primary" size="small" icon={<IconLogo />}>长文本按钮</Button>
                 <RowTitle>middle</RowTitle>
-                <Button type="primary" size="middle">主要按钮</Button>
-                <Button type="primary" size="middle" icon={<IconLogo />}>长文本按钮</Button>
+                <Button type="primary">主要按钮</Button>
+                <Button type="primary" icon={<IconLogo />}>长文本按钮</Button>
                 <RowTitle>large</RowTitle>
                 <Button type="primary" size="large">主要按钮</Button>
                 <Button type="primary" size="large" icon={<IconLogo />}>长文本按钮</Button>
@@ -55,17 +55,37 @@ export const ButtonGrids = () => {
             <Grid
                 title="文字按钮"
                 beforeGrid={<p>页面中信息层级较低的按钮形式，可用于大面积展示按钮的场景，例如表格操作列，按钮分为 14px 和 12px 两个规格</p>}
+                repeat={4}
                 fitContent
             >
+                <ColumnTitle />
                 <ColumnTitle>默认 / 悬浮 / 点击</ColumnTitle>
                 <ColumnTitle>禁用</ColumnTitle>
                 <ColumnTitle>加载中</ColumnTitle>
-                <Button type="text" size="middle">普通按钮</Button>
-                <Button type="text" size="middle" disabled>普通按钮</Button>
-                <Button type="text" size="middle" loading>普通按钮</Button>
+                <RowTitle>普通样式 small</RowTitle>
+                <Button type="text" size="small" icon={<IconLogo />}>普通按钮</Button>
+                <Button type="text" size="small" icon={<IconLogo />} disabled>普通按钮</Button>
+                <Button type="text" size="small" icon={<IconLogo />} loading>普通按钮</Button>
+                <RowTitle>普通样式 middle</RowTitle>
+                <Button type="text" icon={<IconLogo />}>普通按钮</Button>
+                <Button type="text" icon={<IconLogo />} disabled>普通按钮</Button>
+                <Button type="text" icon={<IconLogo />} loading>普通按钮</Button>
+                <RowTitle>加强样式 small</RowTitle>
+                <Button type="link" size="small" icon={<IconLogo />}>普通按钮</Button>
+                <Button type="link" size="small" icon={<IconLogo />} disabled>普通按钮</Button>
+                <Button type="link" size="small" icon={<IconLogo />} loading>普通按钮</Button>
+                <RowTitle>加强样式 middle</RowTitle>
+                <Button type="link" icon={<IconLogo />}>普通按钮</Button>
+                <Button type="link" icon={<IconLogo />} disabled>普通按钮</Button>
+                <Button type="link" icon={<IconLogo />} loading>普通按钮</Button>
+                <RowTitle>纯文本样式 small</RowTitle>
                 <Button type="text" size="small">普通按钮</Button>
                 <Button type="text" size="small" disabled>普通按钮</Button>
                 <Button type="text" size="small" loading>普通按钮</Button>
+                <RowTitle>纯文本样式 middle</RowTitle>
+                <Button type="text">普通按钮</Button>
+                <Button type="text" disabled>普通按钮</Button>
+                <Button type="text" loading>普通按钮</Button>
             </Grid>
             <Grid
                 title="图标按钮"
@@ -75,9 +95,9 @@ export const ButtonGrids = () => {
                 <ColumnTitle>默认 / 悬浮 / 点击</ColumnTitle>
                 <ColumnTitle>禁用</ColumnTitle>
                 <ColumnTitle>加载中</ColumnTitle>
-                <Button type="icon" icon={<IconLogo />} tooltip="操作按钮" />
-                <Button type="icon" icon={<IconLogo />} tooltip="操作按钮" disabled />
-                <Button type="icon" icon={<IconLogo />} tooltip="操作按钮" loading />
+                <Button type="text" icon={<IconLogo />} tooltip="操作按钮" />
+                <Button type="text" icon={<IconLogo />} tooltip="操作按钮" disabled />
+                <Button type="text" icon={<IconLogo />} tooltip="操作按钮" loading />
             </Grid>
         </>
     );

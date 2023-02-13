@@ -4,8 +4,7 @@ import {ParagraphExtra} from '@/components/ParagraphExtra';
 import CheckCardGrids from '@/pages/Grids/CheckCardGrids';
 import {useRoleType} from '@/regions';
 import {FormGrids} from './Grids/FormGrids';
-import {CheckboxGrids} from './Grids/CheckboxGrids';
-import {RadioGrids} from './Grids/RadioGrids';
+import {VerticalGrids} from './Grids/VerticalGrids';
 
 export const FormPage = () => {
     const roleType = useRoleType();
@@ -23,14 +22,13 @@ export const FormPage = () => {
                 <p>3. 表单的项呈左右结构，表单控件的类型和宽度暗示了数据类型和数据长度</p>
                 <p>4. 错落有致中的秩序</p>
                 {roleType === '组件库开发' && (
-                    <ParagraphExtra extra={<RadioGrids />}>{'i'.repeat(300) + 'test '.repeat(100)}</ParagraphExtra>
+                    <ParagraphExtra extra={<VerticalGrids />}>{'i'.repeat(300) + 'test '.repeat(100)}</ParagraphExtra>
                 )}
                 <br />
                 <p>表单域的特征，主要由 <Code>Form.Item</Code> 所规定的结构，加上对应的表单控件构成。</p>
             </div>
             <FormGrids />
-            <CheckboxGrids />
-            <RadioGrids />
+            <VerticalGrids />
             <CheckCardGrids />
         </Page>
     );

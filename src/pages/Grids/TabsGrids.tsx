@@ -1,5 +1,5 @@
 import {Tabs} from 'antd';
-import {Grid, ColumnTitle} from '@/components/Grid';
+import {Grid, RowTitle} from '@/components/Grid';
 
 export const TabsGrids = () => {
     return (
@@ -18,19 +18,19 @@ export const TabsGrids = () => {
                 </Tabs>
             </Grid>
             <Grid title="标签页尺寸" repeat={2}>
-                <ColumnTitle>small</ColumnTitle>
+                <RowTitle>small</RowTitle>
                 <Tabs size="small">
                     <Tabs.TabPane key="1" tab="标签" />
                     <Tabs.TabPane key="2" tab="标签" />
                     <Tabs.TabPane key="3" tab="标签" />
                 </Tabs>
-                <ColumnTitle>middle</ColumnTitle>
+                <RowTitle>middle</RowTitle>
                 <Tabs size="middle">
                     <Tabs.TabPane key="1" tab="标签" />
                     <Tabs.TabPane key="2" tab="标签" />
                     <Tabs.TabPane key="3" tab="标签" />
                 </Tabs>
-                <ColumnTitle>large</ColumnTitle>
+                <RowTitle>large</RowTitle>
                 <Tabs size="large">
                     <Tabs.TabPane key="1" tab="标签" />
                     <Tabs.TabPane key="2" tab="标签" />
