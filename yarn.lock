@@ -1800,10 +1800,10 @@
   dependencies:
     use-sync-external-store "^1.2.0"
 
-"@panda-design/extra@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@panda-design/extra/-/extra-0.0.1.tgz#8507a67cb0ebb72507d3702bf8f4db9894e38b83"
-  integrity sha512-vRaVZzBSv9vEtzlx31OZAl14+7gNtc9QKqQi05REdmYQtazQ3kjqCegFPMBU+PHc8OVjcCxMLO4u0wld2KByeA==
+"@panda-design/extra@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@panda-design/extra/-/extra-0.0.2.tgz#e31bb448f4238074fdb5fa643d4d60902f397a36"
+  integrity sha512-xMBEwlAY48bNQ7sEIYd2KnCCsdJzdjPGtkjczp9axEW9bgcjws2ComI7FcEk7lazrlJ0XKWOMYNpIKH8zK0nLQ==
   dependencies:
     gaussian-background-generator "^0.0.1"
 
