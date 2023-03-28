@@ -1,4 +1,4 @@
-import {Checkbox, Radio, Space} from 'antd';
+import {Checkbox, Radio, Space, Typography} from 'antd';
 import styled from '@emotion/styled';
 import {Grid, ColumnTitle, RowTitle} from '@/components/Grid';
 
@@ -10,7 +10,8 @@ const HorizontalContainer = styled.div`
 export const VerticalGrids = () => {
     return (
         <>
-            <Grid title="组合用法" repeat={3}>
+            <Typography.Title>组合用法</Typography.Title>
+            <Grid repeat={3}>
                 <ColumnTitle />
                 <ColumnTitle>横向</ColumnTitle>
                 <ColumnTitle>纵向</ColumnTitle>

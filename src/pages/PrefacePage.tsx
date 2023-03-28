@@ -1,12 +1,11 @@
 import {ReactNode} from 'react';
 import styled from '@emotion/styled';
-import {Segmented, Space} from 'antd';
+import {Segmented, Space, Typography} from 'antd';
 import {IconLogo} from '@panda-design/components';
 import {GaussianBackground} from '@panda-design/extra';
 import {trimStart} from 'lodash';
-import {css} from '@emotion/css';
 import {createLink} from '@/components/Link';
-import {useThemeType, setThemeType, useRoleType, setRoleType, Role} from '@/regions';
+import {Role, setRoleType, setThemeType, useRoleType, useThemeType} from '@/regions';
 import {Code} from '@/components/Typography';
 import packageJson from '../../package.json';
 
@@ -15,7 +14,7 @@ const {dependencies} = packageJson;
 const StyledGaussianBackground = styled(GaussianBackground)`
     padding: 100px;
 
-    h1 {
+    h1.ant5-typography {
         margin-top: 80px;
     }
 `;
@@ -77,27 +76,17 @@ export const PrefacePage = () => {
     return (
         <StyledGaussianBackground>
             <PageTitle><StyledIconLogo />Panda Design</PageTitle>
-            <h1>关于 Panda Design</h1>
-            <p>Panda Design 是基于 antd@5 开发的一套设计系统，旨在以高可插拔的方式注入新的设计风格。你可以在 <NpmLink>这里</NpmLink> 找到现有的 Panda Design 组件库代码，欢迎试用。</p>
-            <p>antd@5 的设计系统非常给力，使得我们可以畅想如何在其基础上构造我们的主题、自定义组件，并可以和 antd 以及其他的第三方自定义组件一起使用。我们会尽可能的与 antd 原本的 api 兼容，让你可以很快速且愉悦的从 antd 风格切换为 panda 风格，或者从 panda 风格切换回 antd。</p>
-            <h1 className={css`margin-top: 80px;`}>关于此设计规范</h1>
-            <p>这里是 Panda Design 的设计规范，规范主要会介绍到我们的一些理念、组件以及它们的使用场景。</p>
-            <p>
-                目前此规范仍在调整中，所以你可以看到我们采用了形如 <Code>0.0.x</Code> 的版本号。
-                这份规范的源代码可以在<DemoLink>这里</DemoLink>找到。
-            </p>
+            <Typography.Title>关于 Panda Design</Typography.Title>
+            <p><Code>Panda Design</Code> 是基于 <Code>antd@5</Code> 开发的一套设计系统，旨在以高可插拔的方式注入新的设计风格。你可以在 <NpmLink>这里</NpmLink> 找到现有的 <Code>Panda Design</Code> 组件库代码，欢迎试用。</p>
+            <p><Code>antd@5</Code> 的设计系统非常给力，使得我们可以畅想如何在其基础上构造我们的主题和组件，并可以和 antd 以及其他的第三方自定义组件一起使用。</p>
+            <p>原则上，<Code>Panda Design</Code> 仅是 antd API 的拓展，你可以很快速且愉悦的在两个版本的风格之间切换。</p>
+            <Typography.Title>关于此设计规范</Typography.Title>
+            <p>这里是 <Code>Panda Design</Code> 的设计规范，主要会介绍到我们的一些理念、组件以及它们的使用场景。</p>
+            <p>目前此规范仍在调整中，所以你可以看到我们采用了形如 <Code>0.0.x</Code> 的版本号。 这份规范的源代码可以在 <DemoLink>这里</DemoLink> 找到。</p>
             <br />
-            <p>在此篇文档中，我们会依次介绍 Panda Design 的 Color 色彩、Layout 布局、Button 按钮、Link 超链接、Body 页面主体、Form 表单、Decoration 装饰、Animation 动态效果。每个部分会包含数个组件。</p>
-            <p>
-                {'你看到的这份规范基于 '}
-                <Code>antd@{trimStart(dependencies.antd, '^')}</Code>
-                {' 与 '}
-                <Code>@panda-design/components@{trimStart(dependencies['@panda-design/components'], '^')}</Code>
-                ，并非最终定稿。
-            </p>
-            <h1>
-                选择一个职能
-            </h1>
+            <p>在此篇文档中，我们会依次介绍 <Code>Panda Design</Code> 的 Color 色彩、Layout 布局、Button 按钮、Link 超链接、Body 页面主体、Form 表单、Decoration 装饰、Animation 动态效果。每个部分会包含规范说明、组件、用例。</p>
+            <p>你看到的这份规范基于 <Code>antd@{trimStart(dependencies.antd, '^')}</Code> 与 <Code>@panda-design/components@{trimStart(dependencies['@panda-design/components'], '^')}</Code>，由于潜在可能的变动，尽量使用互相对应的版本。</p>
+            <Typography.Title>选择一个职能</Typography.Title>
             <p>
                 <Space size={32}>
                     <Space>

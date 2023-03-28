@@ -1,14 +1,11 @@
-import {Button as AntButton} from 'antd';
+import {Button as AntButton, Typography} from 'antd';
 import {ColumnTitle, Grid} from '@/components/Grid';
 
 export const ButtonDebugGrids = () => {
     return (
         <>
-            <Grid
-                title="附：测试 antd 默认样式"
-                fitContent
-                repeat={7}
-            >
+            <Typography.Title>附：测试 antd 默认样式</Typography.Title>
+            <Grid fitContent repeat={7}>
                 <ColumnTitle>primary</ColumnTitle>
                 <ColumnTitle>default</ColumnTitle>
                 <ColumnTitle>dashed</ColumnTitle>

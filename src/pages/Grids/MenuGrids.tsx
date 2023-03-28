@@ -1,4 +1,4 @@
-import {Menu, MenuProps} from 'antd';
+import {Menu, MenuProps, Typography} from 'antd';
 import styled from '@emotion/styled';
 import {colors} from '@panda-design/components';
 import {ReactNode} from 'react';
@@ -90,27 +90,30 @@ const MenuContainer = ({title, children}: Props) => {
 
 export const MenuGrids = () => {
     return (
-        <Grid title="Menu 导航菜单" repeat={2}>
-            <ColumnTitle>基础使用</ColumnTitle>
-            <ColumnTitle>分类导航</ColumnTitle>
-            <MenuContainer title="导航标题">
-                <Menu
-                    inlineIndent={12}
-                    style={{width: 256}}
-                    defaultSelectedKeys={['1']}
-                    mode="inline"
-                    items={itemsBasic}
-                />
-            </MenuContainer>
-            <MenuContainer title="导航标题">
-                <Menu
-                    inlineIndent={12}
-                    style={{width: 256}}
-                    defaultSelectedKeys={['1']}
-                    mode="inline"
-                    items={itemsGroup}
-                />
-            </MenuContainer>
-        </Grid>
+        <>
+            <Typography.Title>Menu 导航菜单</Typography.Title>
+            <Grid repeat={2}>
+                <ColumnTitle>基础使用</ColumnTitle>
+                <ColumnTitle>分类导航</ColumnTitle>
+                <MenuContainer title="导航标题">
+                    <Menu
+                        inlineIndent={12}
+                        style={{width: 256}}
+                        defaultSelectedKeys={['1']}
+                        mode="inline"
+                        items={itemsBasic}
+                    />
+                </MenuContainer>
+                <MenuContainer title="导航标题">
+                    <Menu
+                        inlineIndent={12}
+                        style={{width: 256}}
+                        defaultSelectedKeys={['1']}
+                        mode="inline"
+                        items={itemsGroup}
+                    />
+                </MenuContainer>
+            </Grid>
+        </>
     );
 };

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import {GaussianBackground, GaussianBackgroundLayer} from '@panda-design/extra';
+import {Typography} from 'antd';
 import {Grid} from '@/components/Grid';
 
 const layersLightColorful: GaussianBackgroundLayer[] = [
@@ -49,25 +50,28 @@ const StyledGaussianBackground = styled(GaussianBackground)<{ghost?: boolean}>`
 
 export const GaussianBackgroundGrids = () => {
     return (
-        <Grid title="Gaussian Background 呼吸背景 (Unstable)" repeat={3}>
-            <StyledGaussianBackground>
-                描述文字
-            </StyledGaussianBackground>
-            <StyledGaussianBackground layers={layersLightColorful}>
-                描述文字
-            </StyledGaussianBackground>
-            <StyledGaussianBackground ghost layers={layersDarkColorful}>
-                描述文字
-            </StyledGaussianBackground>
-            <StyledGaussianBackground ghost layers={layersBlue}>
-                描述文字
-            </StyledGaussianBackground>
-            <StyledGaussianBackground ghost layers={layersRed}>
-                描述文字
-            </StyledGaussianBackground>
-            <StyledGaussianBackground ghost layers={layersPurple}>
-                描述文字
-            </StyledGaussianBackground>
-        </Grid>
+        <>
+            <Typography.Title>Gaussian Background 呼吸背景 (Unstable)</Typography.Title>
+            <Grid repeat={3}>
+                <StyledGaussianBackground>
+                    描述文字
+                </StyledGaussianBackground>
+                <StyledGaussianBackground layers={layersLightColorful}>
+                    描述文字
+                </StyledGaussianBackground>
+                <StyledGaussianBackground ghost layers={layersDarkColorful}>
+                    描述文字
+                </StyledGaussianBackground>
+                <StyledGaussianBackground ghost layers={layersBlue}>
+                    描述文字
+                </StyledGaussianBackground>
+                <StyledGaussianBackground ghost layers={layersRed}>
+                    描述文字
+                </StyledGaussianBackground>
+                <StyledGaussianBackground ghost layers={layersPurple}>
+                    描述文字
+                </StyledGaussianBackground>
+            </Grid>
+        </>
     );
 };

@@ -1,4 +1,4 @@
-import {Form, FormProps, Space, Checkbox, Switch, Radio, Input, Select} from 'antd';
+import {Form, FormProps, Space, Checkbox, Switch, Radio, Input, Select, Typography} from 'antd';
 import {CSSProperties} from 'react';
 import {Grid} from '@/components/Grid';
 
@@ -19,7 +19,8 @@ const optionsPartialDisabled = [{label: '选项一', value: 1}, {label: '选项�
 export const FormGrids = () => {
     return (
         <>
-            <Grid title="Form 表单（默认）" repeat={1} fitContent={false}>
+            <Typography.Title>Form 表单（默认态）</Typography.Title>
+            <Grid repeat={1} fitContent={false}>
                 <Form {...formLayoutProps}>
                     <Form.Item label="Switch 开关">
                         <Switch />
@@ -42,7 +43,8 @@ export const FormGrids = () => {
                     </Form.Item>
                 </Form>
             </Grid>
-            <Grid title="Form 表单（禁用）" repeat={1} fitContent={false}>
+            <Typography.Title>Form 表单（禁用态）</Typography.Title>
+            <Grid repeat={1} fitContent={false}>
                 <Form {...formLayoutProps}>
                     <Form.Item label="Switch 开关">
                         <Space>

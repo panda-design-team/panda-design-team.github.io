@@ -8,5 +8,6 @@ module.exports = {
     },
     rules: {
         'max-len': 'off',
+        'react/jsx-no-bind': 'off',
     },
 };

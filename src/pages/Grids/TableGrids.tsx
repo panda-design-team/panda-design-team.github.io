@@ -1,4 +1,4 @@
-import {Table} from 'antd';
+import {Table, Typography} from 'antd';
 import {Grid} from '@/components/Grid';
 
 const dataSource = [
@@ -37,7 +37,8 @@ const columns = [
 export const TableGrids = () => {
     return (
         <>
-            <Grid title="Table 表格" repeat={1}>
+            <Typography.Title>Table 表格</Typography.Title>
+            <Grid repeat={1}>
                 <Table
                     columns={columns}
                     dataSource={dataSource}
