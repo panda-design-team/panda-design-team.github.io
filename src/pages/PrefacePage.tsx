@@ -4,6 +4,7 @@ import {Segmented, Space, Typography} from 'antd';
 import {IconLogo} from '@panda-design/components';
 import {GaussianBackground} from '@panda-design/extra';
 import {trimStart} from 'lodash';
+import {css} from '@emotion/css';
 import {createLink} from '@/components/Link';
 import {Role, setRoleType, setThemeType, useRoleType, useThemeType} from '@/regions';
 import {Code} from '@/components/Typography';
@@ -84,33 +85,31 @@ export const PrefacePage = () => {
             <p>这里是 <Code>Panda Design</Code> 的设计规范，主要会介绍到我们的一些理念、组件以及它们的使用场景。</p>
             <p>目前此规范仍在调整中，所以你可以看到我们采用了形如 <Code>0.0.x</Code> 的版本号。 这份规范的源代码可以在 <DemoLink>这里</DemoLink> 找到。</p>
             <br />
-            <p>在此篇文档中，我们会依次介绍 <Code>Panda Design</Code> 的 Color 色彩、Layout 布局、Button 按钮、Link 超链接、Body 页面主体、Form 表单、Decoration 装饰、Animation 动态效果。每个部分会包含规范说明、组件、用例。</p>
+            <p>在此篇文档中，我们会依次介绍 <Code>Panda Design</Code> 的 Flavor 风格、Layout 布局、Button 按钮、Link 超链接、Body 页面主体、Form 表单、Decoration 装饰、Animation 动态效果。每个部分会包含规范说明、组件、用例。</p>
             <p>你看到的这份规范基于 <Code>antd@{trimStart(dependencies.antd, '^')}</Code> 与 <Code>@panda-design/components@{trimStart(dependencies['@panda-design/components'], '^')}</Code>，由于潜在可能的变动，尽量使用互相对应的版本。</p>
             <Typography.Title>选择一个职能</Typography.Title>
-            <p>
-                <Space size={32}>
+            <Space size={32} className={css`margin-bottom: 1em`}>
+                <Space>
+                    <div>职能</div>
+                    <Segmented
+                        options={['产品经理', '设计师', '前端开发', '组件库开发']}
+                        value={roleType}
+                        // @ts-expect-error
+                        onChange={setRoleType}
+                    />
+                </Space>
+                {(roleType === '组件库开发') && (
                     <Space>
-                        <div>职能</div>
+                        <div>切换主题</div>
                         <Segmented
-                            options={['产品经理', '设计师', '前端开发', '组件库开发']}
-                            value={roleType}
+                            options={['panda', 'antd']}
+                            value={themeType}
                             // @ts-expect-error
-                            onChange={setRoleType}
+                            onChange={setThemeType}
                         />
                     </Space>
-                    {(roleType === '组件库开发') && (
-                        <Space>
-                            <div>切换主题</div>
-                            <Segmented
-                                options={['panda', 'antd']}
-                                value={themeType}
-                                // @ts-expect-error
-                                onChange={setThemeType}
-                            />
-                        </Space>
-                    )}
-                </Space>
-            </p>
+                )}
+            </Space>
             {roleText[roleType]}
         </StyledGaussianBackground>
     );

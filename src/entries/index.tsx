@@ -2,7 +2,7 @@ import {createRoot} from 'react-dom/client';
 import 'antd/dist/reset.css';
 import Provider from '@/components/Provider';
 import {PrefacePage} from '@/pages/PrefacePage';
-import {ColorPage} from '@/pages/ColorPage';
+import {FlavorPage} from '@/pages/FlavorPage';
 import {LayoutPage} from '@/pages/LayoutPage';
 import {ButtonPage} from '@/pages/ButtonPage';
 import {LinkPage} from '@/pages/LinkPage';
@@ -15,7 +15,7 @@ import '@/styles';
 const App = () => (
     <Provider>
         <PrefacePage />
-        <ColorPage />
+        <FlavorPage />
         <LayoutPage />
         <ButtonPage />
         <LinkPage />
