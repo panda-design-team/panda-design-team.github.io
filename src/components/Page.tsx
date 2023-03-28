@@ -22,9 +22,7 @@ const PageTitle = styled.div<{disableShadow?: boolean}>`
 `;
 
 const PageTitleFont = styled.div`
-    //font-family: Din Alternate, sans-serif;
     font-size: 60px;
-    //font-weight: bold;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -34,7 +32,6 @@ const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 80px 100px 100px 100px;
-    gap: 80px;
 `;
 
 const pageVisibleRegion = createMappedRegion<string, boolean>(true, {withLocalStorageKey: 'PandaDesign/page'});

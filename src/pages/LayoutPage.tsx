@@ -1,6 +1,5 @@
-import {Typography} from 'antd';
 import {Page} from '@/components/Page';
-import {Grid} from '@/components/Grid';
+import {TypographyGrids} from '@/pages/Grids/TypographyGrids';
 import {MenuGrids} from '@/pages/Grids/MenuGrids';
 
 export const LayoutPage = () => {
@@ -17,15 +16,7 @@ export const LayoutPage = () => {
                 <p>三、视觉引导</p>
                 <p>通过一些点缀，或者线条、色块，我们可以引导用户视线，但需注意其与信息的内在联系，失败的视觉引导可能起到相反的作用。</p>
             </div>
-            <Grid title="Typography 排版" repeat={1}>
-                <Typography.Title>h1. 标题</Typography.Title>
-                <Typography.Title level={2}>h2. 标题</Typography.Title>
-                <Typography.Title level={3}>h3. 标题</Typography.Title>
-                <Typography.Title level={4}>h4. 标题</Typography.Title>
-                <Typography.Title level={5}>h5. 标题</Typography.Title>
-                <Typography.Text>正文</Typography.Text>
-                <Typography.Text type="secondary">辅助信息</Typography.Text>
-            </Grid>
+            <TypographyGrids />
             <MenuGrids />
         </Page>
     );

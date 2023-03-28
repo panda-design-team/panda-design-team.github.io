@@ -2,6 +2,7 @@ import {ReactNode} from 'react';
 import styled from '@emotion/styled';
 import {css} from '@emotion/react';
 import {colors} from '@panda-design/components';
+import {marginTop} from '@/styles/classNames';
 
 const fitContentCss = css`
     width: fit-content;
@@ -36,12 +37,12 @@ interface GridProps extends GridContainerProps {
 
 export function Grid({title, className, beforeGrid, afterGrid, children, repeat = 3, fitContent = true}: GridProps) {
     return (
-        <div>
-            {title && <h1>{title}</h1>}
+        <>
+            {title && <h1 className={marginTop(80)}>{title}</h1>}
             {beforeGrid}
             {children && <GridContainer className={className} repeat={repeat} fitContent={fitContent}>{children}</GridContainer>}
             {afterGrid}
-        </div>
+        </>
     );
 }
 
