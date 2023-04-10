@@ -1,7 +1,7 @@
 import {Table, TableColumnsType, Typography} from 'antd';
 import styled from '@emotion/styled';
 import {ReactNode} from 'react';
-import {colors} from '@panda-design/components';
+import {Text} from '@panda-design/components';
 import {css} from '@emotion/css';
 
 const transparentSteelBlue = '#e1e3e847';
@@ -80,7 +80,7 @@ const dataSource: TypographyFlavor[] = [
         fontSize: <Typography.Title>28px</Typography.Title>,
         fontWeight: '中黑',
         lineHeight: '42px',
-        color: 'rgba(0, 0, 0, .88) (待定)',
+        color: 'gray-10',
     },
     {
         key: 'h2',
@@ -88,7 +88,7 @@ const dataSource: TypographyFlavor[] = [
         fontSize: <Typography.Title level={2}>24px</Typography.Title>,
         fontWeight: '中黑',
         lineHeight: '36px',
-        color: 'rgba(0, 0, 0, .88) (待定)',
+        color: 'gray-10',
     },
     {
         key: 'h3',
@@ -96,7 +96,7 @@ const dataSource: TypographyFlavor[] = [
         fontSize: <Typography.Title level={3}>20px</Typography.Title>,
         fontWeight: '中黑',
         lineHeight: '30px',
-        color: 'rgba(0, 0, 0, .88) (待定)',
+        color: 'gray-10',
     },
     {
         key: 'h4',
@@ -104,7 +104,7 @@ const dataSource: TypographyFlavor[] = [
         fontSize: <Typography.Title level={4}>16px</Typography.Title>,
         fontWeight: '中黑',
         lineHeight: '24px',
-        color: 'rgba(0, 0, 0, .88) (待定)',
+        color: 'gray-10',
     },
     {
         key: 'h5',
@@ -112,39 +112,47 @@ const dataSource: TypographyFlavor[] = [
         fontSize: <Typography.Title level={5}>14px</Typography.Title>,
         fontWeight: '中黑',
         lineHeight: '22px',
-        color: 'rgba(0, 0, 0, .88) (待定)',
+        color: 'gray-10',
     },
     {
-        key: 'text-1',
-        case: <span>内文一 正文</span>,
-        fontSize: <span>14px</span>,
+        key: 'text-primary',
+        case: <Text>内文一 正文</Text>,
+        fontSize: <Text>14px</Text>,
         fontWeight: '常规',
         lineHeight: '22px',
-        color: 'rgba(0, 0, 0, .85) (待定)',
+        color: 'gray-10',
     },
     {
-        key: 'text-2',
-        case: <span className={css`color: ${colors['gray-8']}`}>内文二 辅助文字</span>,
-        fontSize: <span className={css`color: ${colors['gray-8']}`}>14px</span>,
+        key: 'text-secondary',
+        case: <Text type="secondary">内文二 辅助文字</Text>,
+        fontSize: <Text type="secondary">14px</Text>,
         fontWeight: '常规',
         lineHeight: '22px',
         color: 'gray-8',
     },
     {
-        key: 'text-3',
-        case: <span className={css`color: ${colors['gray-7']}`}>内文三 次要文字</span>,
-        fontSize: <span className={css`color: ${colors['gray-7']}`}>14px</span>,
+        key: 'text-tertiary',
+        case: <Text type="tertiary">内文三 次要文字</Text>,
+        fontSize: <Text type="tertiary">14px</Text>,
         fontWeight: '常规',
         lineHeight: '22px',
         color: 'gray-7',
     },
     {
-        key: 'text-4',
-        case: <span className={css`font-size: 12px`}>内文四 内容最小字号</span>,
-        fontSize: <span className={css`font-size: 12px`}>12px</span>,
+        key: 'text-quaternary',
+        case: <Text type="quaternary">内文四 禁用文字</Text>,
+        fontSize: <Text type="quaternary">14px</Text>,
+        fontWeight: '常规',
+        lineHeight: '22px',
+        color: 'gray-6',
+    },
+    {
+        key: 'text-small',
+        case: <Text className={css`font-size: 12px`}>内文一 正文（最小号文字）</Text>,
+        fontSize: <Text className={css`font-size: 12px`}>12px</Text>,
         fontWeight: '常规',
         lineHeight: '18px',
-        color: 'rgba(0, 0, 0, .85) (待定)',
+        color: 'gray-10',
     },
 ];
 

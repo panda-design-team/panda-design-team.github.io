@@ -1,26 +1,15 @@
-import {ConfigProvider, ThemeConfig} from 'antd';
+import {ConfigProvider} from 'antd';
 import {ReactNode} from 'react';
 import {theme} from '@panda-design/components';
 import {useThemeType} from '@/regions';
 
 ConfigProvider.config({prefixCls: 'ant5'});
 
-const nextTheme: ThemeConfig = {
-    ...theme,
-    token: {
-        ...theme.token,
-        fontSizeHeading1: 28,
-        fontSizeHeading2: 24,
-        fontSizeHeading3: 20,
-        fontSizeHeading4: 16,
-        fontSizeHeading5: 14,
-        lineHeightHeading1: 1.5,
-        lineHeightHeading2: 1.5,
-        lineHeightHeading3: 1.5,
-        lineHeightHeading4: 1.5,
-        lineHeightHeading5: 22 / 14,
-    },
-};
+// 对于文档流中的 Title，不应用 panda-design 注入的 margin
+if (theme.components?.Typography) {
+    theme.components.Typography.sizeMarginHeadingVerticalStart = undefined;
+    theme.components.Typography.sizeMarginHeadingVerticalEnd = undefined;
+}
 
 interface Props {
     children: ReactNode;
@@ -33,7 +22,7 @@ function Provider({children}: Props) {
             autoInsertSpaceInButton={false}
             prefixCls="ant5"
             // NOTE antd 不支持 undefined 切换
-            theme={themeType === 'panda' ? nextTheme : {}}
+            theme={themeType === 'panda' ? theme : {}}
         >
             {children}
         </ConfigProvider>
