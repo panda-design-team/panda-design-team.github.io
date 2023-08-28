@@ -1,8 +1,7 @@
 import {ReactNode} from 'react';
 import styled from '@emotion/styled';
 import {Segmented, Space, Typography} from 'antd';
-import {IconLogo} from '@panda-design/components';
-import {GaussianBackground} from '@panda-design/extra';
+import {IconLogo, GaussianBackground} from '@panda-design/components';
 import {trimStart} from 'lodash';
 import {css} from '@emotion/css';
 import {createLink} from '@/components/Link';
