@@ -7,8 +7,8 @@ ConfigProvider.config({prefixCls: 'ant5'});
 
 // 对于文档流中的 Title，不应用 panda-design 注入的 margin
 if (theme.components?.Typography) {
-    theme.components.Typography.titleMarginTop = undefined;
-    theme.components.Typography.titleMarginBottom = undefined;
+    delete theme.components.Typography.titleMarginTop;
+    delete theme.components.Typography.titleMarginBottom;
 }
 
 interface Props {
