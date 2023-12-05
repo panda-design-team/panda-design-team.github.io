@@ -34,7 +34,6 @@
     },
     "include": [
         "src",
-        "scripts",
-        "*.ts"
+        "vite.config.ts"
     ]
 }
