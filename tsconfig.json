@@ -21,7 +21,6 @@
         "jsx": "preserve",
         "esModuleInterop": true,
         "experimentalDecorators": false,
-        "keyofStringsOnly": true,
         // linter checks
         "strict": true,
         "noFallthroughCasesInSwitch": true,

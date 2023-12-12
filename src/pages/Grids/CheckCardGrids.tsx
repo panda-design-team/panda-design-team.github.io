@@ -5,26 +5,15 @@ import {Typography} from 'antd';
 import {Grid} from '@/components/Grid';
 
 const StyledCardGroup = styled(CheckCard.Group)`
-    --item-active-bg: ${colors.white};
-
-    &.ant-pro-checkcard-group {
-        display: flex;
-        gap: 8px;
-    }
-
-    .ant-pro-checkcard {
-        width: initial;
-        margin: initial;
-    }
-
-    .ant-pro-checkcard-content {
-        padding: 0 20px;
-        height: 30px;
-        line-height: 30px;
-    }
-    
-    .ant-pro-checkcard-checked {
+    .ant5-pro-checkcard-checked {
         background-color: ${colors.white};
+    }
+
+    .ant5-pro-checkcard-checked:after {
+        border: 6px solid #000000;
+        border-block-end: 6px solid transparent;
+        border-inline-start: 6px solid transparent;
+        border-start-end-radius: 4px;
     }
 `;
 
