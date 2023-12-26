@@ -10,7 +10,6 @@ if (theme.components?.Typography) {
     delete theme.components.Typography.titleMarginTop;
     delete theme.components.Typography.titleMarginBottom;
 }
-theme.cssVar = true;
 
 interface Props {
     children: ReactNode;
