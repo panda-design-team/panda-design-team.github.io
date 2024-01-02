@@ -3,13 +3,15 @@ import {Button} from '@panda-design/components';
 import {css} from '@emotion/css';
 import {ColumnTitle, Grid, RowTitle} from '@/components/Grid';
 
+export type ButtonType = 'primary' | 'default' | 'flat' | 'text' | 'link' | 'dashed';
+
 const ghostContainerCss = css`
     background-color: lightgray;
     padding: 10px 500px 10px 20px;
     margin: -10px -500px -10px -20px;
 `;
 
-export const ButtonDebugGrids = () => {
+export const ButtonExtraGrids = () => {
     return (
         <>
             <Typography.Title>样式表</Typography.Title>
@@ -28,6 +30,13 @@ export const ButtonDebugGrids = () => {
                 <Button type="dashed">按钮</Button>
                 <Button type="text">按钮</Button>
                 <Button type="link">按钮</Button>
+                <RowTitle>gradient</RowTitle>
+                <Button gradient type="primary">主要按钮</Button>
+                <Button gradient type="flat">按钮</Button>
+                <Button gradient>按钮</Button>
+                <Button gradient type="dashed">按钮</Button>
+                <Button gradient type="text">按钮</Button>
+                <Button gradient type="link">按钮</Button>
                 <RowTitle>disabled</RowTitle>
                 <Button disabled type="primary">主要按钮</Button>
                 <Button disabled type="flat">按钮</Button>
