@@ -5,6 +5,7 @@ import {MenuGrids} from '@/pages/Grids/MenuGrids';
 import {Text} from '@/components/Typography';
 import {WithDemo} from '@/components/WithDemo';
 import {VisualFlowDemo} from '@/pages/Demos/VisualFlowDemo';
+import {ModalGrids} from '@/pages/Grids/ModalGrids';
 
 const Underline = styled.span`
     text-decoration: underline;
@@ -30,6 +31,7 @@ export const LayoutPage = () => {
             <p>通过一些点缀，比如<Text type="info">颜色</Text>、<Underline>线条</Underline>、背景色、图标等，引导用户视线，用户可以脱离正常的浏览顺序，直接关注到想要的信息。</p>
             <p>不过，失败的视觉引导将会打断正常的阅读，不仅没有帮助用户获取信息，还会产生糟糕的体验。</p>
             <MenuGrids />
+            <ModalGrids />
         </Page>
     );
 };

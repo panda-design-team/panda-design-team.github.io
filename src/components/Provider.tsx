@@ -10,6 +10,9 @@ if (theme.components?.Typography) {
     delete theme.components.Typography.titleMarginTop;
     delete theme.components.Typography.titleMarginBottom;
 }
+if (theme.token) {
+    theme.token.borderRadius = 4;
+}
 
 interface Props {
     children: ReactNode;
