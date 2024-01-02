@@ -1,10 +1,18 @@
 import {createRegion} from 'region-core';
 
-const themeTypeRegion = createRegion<'panda' | 'antd'>('panda', {withLocalStorageKey: 'PandaDesign/themeType'});
+type ThemeType = 'black' | 'blue' | 'antd';
+
+const themeTypeRegion = createRegion<ThemeType>('black', {withLocalStorageKey: 'PandaDesign/themeType'});
 
 export const useThemeType = themeTypeRegion.useValue;
 
+export const getThemeType = themeTypeRegion.getValue;
+
 export const setThemeType = themeTypeRegion.set;
+
+if (!['black', 'blue', 'antd'].includes(getThemeType())) {
+    setThemeType('black');
+}
 
 export type Role = '产品经理' | '设计师' | '前端开发' | '组件库开发';
 

@@ -1,18 +1,11 @@
+import {ReactNode, useLayoutEffect} from 'react';
 import {ConfigProvider} from 'antd';
-import {ReactNode} from 'react';
-import {theme} from '@panda-design/components';
+import zhCN from 'antd/es/locale/zh_CN';
+import {colors} from '@panda-design/components';
 import {useThemeType} from '@/regions';
+import {themeMap} from '@/components/theme';
 
-ConfigProvider.config({prefixCls: 'ant5'});
-
-// 对于文档流中的 Title，不应用 panda-design 注入的 margin
-if (theme.components?.Typography) {
-    delete theme.components.Typography.titleMarginTop;
-    delete theme.components.Typography.titleMarginBottom;
-}
-if (theme.token) {
-    theme.token.borderRadius = 4;
-}
+ConfigProvider.config({prefixCls: 'ant5', theme: themeMap.black});
 
 interface Props {
     children: ReactNode;
@@ -20,12 +13,22 @@ interface Props {
 
 function Provider({children}: Props) {
     const themeType = useThemeType();
+
+    // 为了解决动态主题样式问题，panda 本身并不支持动态主题
+    useLayoutEffect(
+        () => {
+            document.body.style.setProperty('--panda-color-primary', ['blue', 'antd'].includes(themeType) ? colors['info-6'] : colors.black);
+        },
+        [themeType]
+    );
+
     return (
         <ConfigProvider
             autoInsertSpaceInButton={false}
+            locale={zhCN}
             prefixCls="ant5"
             // NOTE antd 不支持 undefined 切换
-            theme={themeType === 'panda' ? theme : {}}
+            theme={themeMap[themeType] ?? themeMap.black}
         >
             {children}
         </ConfigProvider>
