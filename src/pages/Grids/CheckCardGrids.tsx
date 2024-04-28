@@ -5,11 +5,11 @@ import {Typography} from 'antd';
 import {Grid} from '@/components/Grid';
 
 const StyledCardGroup = styled(CheckCard.Group)`
-    .ant5-pro-checkcard-checked {
+    .ant-5-pro-checkcard-checked {
         background-color: ${colors.white};
     }
 
-    .ant5-pro-checkcard-checked:after {
+    .ant-5-pro-checkcard-checked:after {
         border: 6px solid #000000;
         border-block-end: 6px solid transparent;
         border-inline-start: 6px solid transparent;

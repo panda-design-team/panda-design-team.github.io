@@ -5,7 +5,7 @@ import {colors} from '@panda-design/components';
 import {useThemeType} from '@/regions';
 import {themeMap} from '@/components/theme';
 
-ConfigProvider.config({prefixCls: 'ant5', theme: themeMap.black});
+ConfigProvider.config({prefixCls: 'ant-5', theme: themeMap.black});
 
 interface Props {
     children: ReactNode;
@@ -26,7 +26,7 @@ function Provider({children}: Props) {
         <ConfigProvider
             autoInsertSpaceInButton={false}
             locale={zhCN}
-            prefixCls="ant5"
+            prefixCls="ant-5"
             // NOTE antd 不支持 undefined 切换
             theme={themeMap[themeType] ?? themeMap.black}
         >

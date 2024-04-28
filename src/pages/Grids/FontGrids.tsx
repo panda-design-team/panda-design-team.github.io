@@ -44,7 +44,7 @@ interface TypographyFlavor {
 }
 
 const tableCss = css`
-    .ant5-typography {
+    .ant-5-typography {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
     }

@@ -9,7 +9,7 @@ import {LinkPage} from '@/pages/LinkPage';
 import {BodyPage} from '@/pages/BodyPage';
 import {FormPage} from '@/pages/FormPage';
 import {DecorationPage} from '@/pages/DecorationPage';
-// import {AnimationPage} from '@/pages/AnimationPage';
+import {AnimationPage} from '@/pages/AnimationPage';
 import '@/styles';
 
 const App = () => (
@@ -22,7 +22,7 @@ const App = () => (
         <BodyPage />
         <FormPage />
         <DecorationPage />
-        {/* <AnimationPage /> */}
+        <AnimationPage />
     </Provider>
 );
 

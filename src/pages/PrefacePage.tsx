@@ -14,7 +14,7 @@ const {dependencies} = packageJson;
 const StyledGaussianBackground = styled(GaussianBackground)`
     padding: 100px;
 
-    h1.ant5-typography {
+    h1.ant-5-typography {
         margin-top: 80px;
     }
 `;
@@ -99,7 +99,6 @@ export const PrefacePage = () => {
                     <Segmented
                         options={['产品经理', '设计师', '前端开发', '组件库开发']}
                         value={roleType}
-                        // @ts-expect-error
                         onChange={setRoleType}
                     />
                 </Space>
@@ -107,9 +106,9 @@ export const PrefacePage = () => {
                     <Space>
                         <div>切换主题</div>
                         <Segmented
+                            // @ts-expect-error
                             options={themeTypeOptions}
                             value={themeType}
-                            // @ts-expect-error
                             onChange={setThemeType}
                         />
                     </Space>

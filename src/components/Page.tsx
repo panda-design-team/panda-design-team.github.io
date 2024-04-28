@@ -33,11 +33,11 @@ const PageContainer = styled.div`
     flex-direction: column;
     padding: 80px 100px 100px 100px;
 
-    h1.ant5-typography {
+    h1.ant-5-typography {
         margin-top: 80px;
     }
 
-    h3.ant5-typography {
+    h3.ant-5-typography {
         margin-top: 60px;
     }
 `;
