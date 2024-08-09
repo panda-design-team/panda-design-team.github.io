@@ -1,25 +1,23 @@
-import {ReactNode, useLayoutEffect} from 'react';
+import {ReactNode, useEffect} from 'react';
 import {ConfigProvider} from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
-import {colors} from '@panda-design/components';
-import {useThemeType} from '@/regions';
-import {themeMap} from '@/components/theme';
+import {getPrimaryColor, usePrimaryColor} from '@/regions';
+import {getThemeByColorPrimary} from '@/theme/theme';
 
-ConfigProvider.config({prefixCls: 'ant-5', theme: themeMap.black});
+ConfigProvider.config({prefixCls: 'ant-5', theme: getThemeByColorPrimary(getPrimaryColor())});
 
 interface Props {
     children: ReactNode;
 }
 
 function Provider({children}: Props) {
-    const themeType = useThemeType();
+    const primaryColor = usePrimaryColor();
 
-    // 为了解决动态主题样式问题，panda 本身并不支持动态主题
-    useLayoutEffect(
+    useEffect(
         () => {
-            document.body.style.setProperty('--panda-color-primary', ['blue', 'antd'].includes(themeType) ? colors['info-6'] : colors.black);
+            ConfigProvider.config({prefixCls: 'ant-5', theme: getThemeByColorPrimary(primaryColor)});
         },
-        [themeType]
+        [primaryColor]
     );
 
     return (
@@ -28,7 +26,7 @@ function Provider({children}: Props) {
             locale={zhCN}
             prefixCls="ant-5"
             // NOTE antd 不支持 undefined 切换
-            theme={themeMap[themeType] ?? themeMap.black}
+            theme={getThemeByColorPrimary(primaryColor)}
         >
             {children}
         </ConfigProvider>

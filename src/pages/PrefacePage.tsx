@@ -1,11 +1,11 @@
 import {ReactNode} from 'react';
 import styled from '@emotion/styled';
 import {Segmented, Space, Typography} from 'antd';
-import {IconLogo, GaussianBackground} from '@panda-design/components';
+import {GaussianBackground, IconLogo} from '@panda-design/components';
 import {trimStart} from 'lodash';
 import {css} from '@emotion/css';
 import {createLink} from '@/components/Link';
-import {Role, setRoleType, setThemeType, useRoleType, useThemeType} from '@/regions';
+import {Role, setRoleType, useRoleType} from '@/regions';
 import {Code} from '@/components/Typography';
 import packageJson from '../../package.json';
 
@@ -39,12 +39,6 @@ const NpmLink = createLink('https://www.npmjs.com/package/@panda-design/componen
 
 const DemoLink = createLink('https://github.com/panda-design-team/panda-design-team.github.io');
 
-const themeTypeOptions = [
-    {label: '黑色', value: 'black'},
-    {label: '蓝色', value: 'blue'},
-    {label: 'antd', value: 'antd'},
-];
-
 const roleText: Record<Role, ReactNode> = {
     产品经理: (
         <>
@@ -76,7 +70,6 @@ const roleText: Record<Role, ReactNode> = {
 };
 
 export const PrefacePage = () => {
-    const themeType = useThemeType();
     const roleType = useRoleType();
 
     return (
@@ -102,17 +95,6 @@ export const PrefacePage = () => {
                         onChange={setRoleType}
                     />
                 </Space>
-                {(roleType === '组件库开发') && (
-                    <Space>
-                        <div>切换主题</div>
-                        <Segmented
-                            // @ts-expect-error
-                            options={themeTypeOptions}
-                            value={themeType}
-                            onChange={setThemeType}
-                        />
-                    </Space>
-                )}
             </Space>
             {roleText[roleType]}
         </StyledGaussianBackground>

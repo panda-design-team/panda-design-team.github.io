@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import {CheckCard} from '@ant-design/pro-card';
-import {colors} from '@panda-design/components';
+import {colors} from '@/theme/colors';
 import {Typography} from 'antd';
 import {Grid} from '@/components/Grid';
 

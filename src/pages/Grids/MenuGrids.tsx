@@ -1,7 +1,7 @@
 import {Menu, MenuProps, Typography} from 'antd';
 import styled from '@emotion/styled';
-import {colors} from '@panda-design/components';
 import {ReactNode} from 'react';
+import {colors} from '@/theme/colors';
 import {ColumnTitle, Grid} from '@/components/Grid';
 
 const itemsBasic: MenuProps['items'] = [

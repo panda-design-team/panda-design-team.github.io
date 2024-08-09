@@ -44,6 +44,13 @@ export const ButtonExtraGrids = () => {
                 <Button disabled type="dashed">按钮</Button>
                 <Button disabled type="text">按钮</Button>
                 <Button disabled type="link">按钮</Button>
+                <RowTitle>gradient-disabled</RowTitle>
+                <Button gradient disabled type="primary">主要按钮</Button>
+                <Button gradient disabled type="flat">按钮</Button>
+                <Button gradient disabled>按钮</Button>
+                <Button gradient disabled type="dashed">按钮</Button>
+                <Button gradient disabled type="text">按钮</Button>
+                <Button gradient disabled type="link">按钮</Button>
                 <RowTitle>danger</RowTitle>
                 <Button danger type="primary">主要按钮</Button>
                 <Button danger type="flat">按钮</Button>

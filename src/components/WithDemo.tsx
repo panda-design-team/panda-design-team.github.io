@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import {ReactNode, useLayoutEffect, useRef} from 'react';
-import {colors} from '@panda-design/components';
+import {colors} from '@/theme/colors';
 
 const Left = styled.div`
     flex: 1;

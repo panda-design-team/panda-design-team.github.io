@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import {css} from '@emotion/react';
-import {colors} from '@panda-design/components';
+import {colors} from '@/theme/colors';
 
 const fitContentCss = css`
     width: fit-content;

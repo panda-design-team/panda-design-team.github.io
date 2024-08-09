@@ -1,7 +1,7 @@
 import {ReactNode, useCallback} from 'react';
 import styled from '@emotion/styled';
 import {createMappedRegion} from 'region-core';
-import {colors} from '@panda-design/components';
+import {colors} from '@/theme/colors';
 
 const PageTitleContainer = styled.div<{disableShadow?: boolean}>`
     position: sticky;

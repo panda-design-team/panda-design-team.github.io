@@ -1,18 +1,15 @@
 import {createRegion} from 'region-core';
 
-type ThemeType = 'black' | 'blue' | 'antd';
+const primaryColorRegion = createRegion<string>('#000', {withLocalStorageKey: 'PandaDesign/primaryColor'});
 
-const themeTypeRegion = createRegion<ThemeType>('black', {withLocalStorageKey: 'PandaDesign/themeType'});
+export const usePrimaryColor = primaryColorRegion.useValue;
 
-export const useThemeType = themeTypeRegion.useValue;
+export const getPrimaryColor = primaryColorRegion.getValue;
 
-export const getThemeType = themeTypeRegion.getValue;
-
-export const setThemeType = themeTypeRegion.set;
-
-if (!['black', 'blue', 'antd'].includes(getThemeType())) {
-    setThemeType('black');
-}
+export const setPrimaryColorAndReload = (color: string) => {
+    primaryColorRegion.set(color);
+    window.location.reload();
+};
 
 export type Role = '产品经理' | '设计师' | '前端开发' | '组件库开发';
 
