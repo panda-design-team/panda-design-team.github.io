@@ -15,7 +15,10 @@ export const getThemeByColorPrimary = (color: string) => {
     if (color === 'antd') {
         return {};
     }
-    return getTheme({colorPrimary: color}, formatTheme);
+    if (color === '#000' || color === 'black') {
+        return getTheme({colorPrimary: color}, formatTheme);
+    }
+    return getTheme({colorPrimary: color, colorInfo: color}, formatTheme);
 };
 
 export const themeConfig = getThemeByColorPrimary(getPrimaryColor());

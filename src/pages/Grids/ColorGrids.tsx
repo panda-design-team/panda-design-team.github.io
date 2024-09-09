@@ -57,7 +57,7 @@ const displayFlex = css`display: flex;`;
 const primaryColorOptions = [
     {label: '黑色', value: 'black'},
     {label: '蓝色', value: '#035fff'},
-    {label: '蓝色（新）', value: '#0DA4F2'},
+    {label: '蓝色（新）', value: '#0080ff'},
     {label: 'antd', value: 'antd'},
 ];
 
