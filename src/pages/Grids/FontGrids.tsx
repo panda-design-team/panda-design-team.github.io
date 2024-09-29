@@ -1,7 +1,7 @@
 import {Table, TableColumnsType, Typography} from 'antd';
 import styled from '@emotion/styled';
 import {ReactNode} from 'react';
-import {Text} from '@panda-design/components';
+import {fontSize, Text} from '@panda-design/components';
 import {css} from '@emotion/css';
 
 const transparentSteelBlue = '#e1e3e847';
@@ -116,7 +116,7 @@ const dataSource: TypographyFlavor[] = [
     },
     {
         key: 'text-primary',
-        case: <Text>内文一 正文</Text>,
+        case: <Text>内文：正文</Text>,
         fontSize: <Text>14px</Text>,
         fontWeight: '常规',
         lineHeight: '22px',
@@ -124,7 +124,7 @@ const dataSource: TypographyFlavor[] = [
     },
     {
         key: 'text-secondary',
-        case: <Text type="secondary">内文二 辅助文字</Text>,
+        case: <Text type="secondary">内文：辅助文字</Text>,
         fontSize: <Text type="secondary">14px</Text>,
         fontWeight: '常规',
         lineHeight: '22px',
@@ -132,7 +132,7 @@ const dataSource: TypographyFlavor[] = [
     },
     {
         key: 'text-tertiary',
-        case: <Text type="tertiary">内文三 次要文字</Text>,
+        case: <Text type="tertiary">内文：次要文字</Text>,
         fontSize: <Text type="tertiary">14px</Text>,
         fontWeight: '常规',
         lineHeight: '22px',
@@ -140,16 +140,48 @@ const dataSource: TypographyFlavor[] = [
     },
     {
         key: 'text-quaternary',
-        case: <Text type="quaternary">内文四 禁用文字</Text>,
+        case: <Text type="quaternary">内文：禁用文字</Text>,
         fontSize: <Text type="quaternary">14px</Text>,
         fontWeight: '常规',
         lineHeight: '22px',
         color: 'gray-6',
     },
     {
+        key: 'text-info',
+        case: <Text type="info">内文：提示文字</Text>,
+        fontSize: <Text type="info">14px</Text>,
+        fontWeight: '常规',
+        lineHeight: '22px',
+        color: 'info',
+    },
+    {
+        key: 'text-success',
+        case: <Text type="success">内文：成功文字</Text>,
+        fontSize: <Text type="success">14px</Text>,
+        fontWeight: '常规',
+        lineHeight: '22px',
+        color: 'success',
+    },
+    {
+        key: 'text-error',
+        case: <Text type="error">内文：失败文字</Text>,
+        fontSize: <Text type="error">14px</Text>,
+        fontWeight: '常规',
+        lineHeight: '22px',
+        color: 'error',
+    },
+    {
+        key: 'text-warning',
+        case: <Text type="warning">内文：警告文字</Text>,
+        fontSize: <Text type="warning">14px</Text>,
+        fontWeight: '常规',
+        lineHeight: '22px',
+        color: 'warning',
+    },
+    {
         key: 'text-small',
-        case: <Text className={css`font-size: 12px`}>内文一 正文（最小号文字）</Text>,
-        fontSize: <Text className={css`font-size: 12px`}>12px</Text>,
+        case: <Text className={fontSize(12)}>内文：正文（最小号文字）</Text>,
+        fontSize: <Text className={fontSize(12)}>12px</Text>,
         fontWeight: '常规',
         lineHeight: '18px',
         color: 'gray-10',

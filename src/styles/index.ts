@@ -4,5 +4,5 @@ import {appendStyleExtra} from '@/styles/appendStyleExtra';
 import {token} from '@/theme/theme';
 
 resetStyle();
-appendStyle({antPrefixCls: 'ant-5', higherPriority: true, resetLink: true, injectAll: true, token});
+appendStyle({antPrefixCls: 'ant-5', resetLink: true, token});
 appendStyleExtra({antPrefixCls: 'ant-5'});

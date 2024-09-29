@@ -1,4 +1,5 @@
 import {Menu, MenuProps, Typography} from 'antd';
+import {IconLogo} from '@panda-design/components';
 import styled from '@emotion/styled';
 import {ReactNode} from 'react';
 import {colors} from '@/theme/colors';
@@ -49,10 +50,12 @@ const itemsGroup: MenuProps['items'] = [
         children: [
             {
                 key: '3',
+                icon: <IconLogo />,
                 label: '菜单内容',
             },
             {
                 key: '4',
+                icon: <IconLogo />,
                 label: '菜单内容',
             },
         ],
