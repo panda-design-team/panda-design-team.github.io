@@ -3,7 +3,7 @@ import {useState} from 'react';
 import {Button, Modal} from '@panda-design/components';
 import {Grid} from '@/components/Grid';
 
-const ModalItem = () => {
+const ModalWithButton = () => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -27,8 +27,14 @@ export const ModalGrids = () => {
     return (
         <>
             <Typography.Title>Modal 对话框</Typography.Title>
-            <Grid repeat={1}>
-                <ModalItem />
+            <Grid repeat={2}>
+                <ModalWithButton />
+                <Button
+                    type="primary"
+                    onClick={() => Modal.confirm({title: '标题位置', content: '内容区'})}
+                >
+                    打开 Modal Confirm
+                </Button>
             </Grid>
         </>
     );
