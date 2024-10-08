@@ -1,7 +1,7 @@
 import {ReactNode} from 'react';
 import {ConfigProvider} from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
-import {MessageContentHolder} from '@panda-design/components/es/message/MessageContentHolder';
+import {MessageContentHolder} from '@panda-design/components';
 import {configProviderProps} from '@/theme/theme';
 
 ConfigProvider.config({prefixCls: 'ant-5', theme: configProviderProps.theme});

@@ -1904,10 +1904,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@panda-design/components@^0.5.0-alpha.0":
-  version "0.5.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@panda-design/components/-/components-0.5.0-alpha.0.tgz#cad2816d4db99a384f1b9e3e379e5274847feac8"
-  integrity sha512-d0+6n75quzxBJENMSfWQAW+wXEQvAYnR0ZhfilVhGJvr6eVDb+x0ZB5DaAkbxO5qk1S1kOoljD06R+lglI/Mlw==
+"@panda-design/components@^0.5.0-alpha.2":
+  version "0.5.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@panda-design/components/-/components-0.5.0-alpha.2.tgz#b01434396f98b5a143927bd70107564a1973cf1d"
+  integrity sha512-+qlGFLUq6YV9cDIjx0ookEja6RmNY9nMXd267t8aBXI+1nu5MrH4+MNr0OUv1ABjNBI/Wt4ffzE0BXWuIMwMdA==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
