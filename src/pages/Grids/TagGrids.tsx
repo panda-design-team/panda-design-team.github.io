@@ -41,10 +41,7 @@ export const TagGrids = () => {
                 <EllipsisTag type="flat">标签文字很多放不下</EllipsisTag>
             </Grid>
             <Typography.Title level={3}>标签样式表</Typography.Title>
-            <P>
-                {'切换禁用态 '}
-                <Switch checked={disabled} onChange={v => handleDisabledChange(v)} />
-            </P>
+            <P>切换禁用态 <Switch checked={disabled} onChange={v => handleDisabledChange(v)} /></P>
             <Grid repeat={9}>
                 <ColumnTitle />
                 <ColumnTitle>primary</ColumnTitle>

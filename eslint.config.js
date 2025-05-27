@@ -15,6 +15,7 @@ const stylisticConfigs = stylistic.configs.customize({
 
 stylisticConfigs.rules['@stylistic/object-curly-spacing'] = ['error', 'never'];
 stylisticConfigs.rules['@stylistic/jsx-curly-brace-presence'] = 'off';
+stylisticConfigs.rules['@stylistic/jsx-one-expression-per-line'] = 'off';
 
 export default tseslint.config([
     eslint.configs.recommended,

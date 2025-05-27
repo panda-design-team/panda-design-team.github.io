@@ -120,34 +120,10 @@ export const ColorGrids = () => {
             </div>
             <Typography.Title level={3}>功能色</Typography.Title>
             <p>在整体为黑白的页面主题上，我们再对部分要素通过功能色和辅助色的方式进行高亮，以此引导用户的注意力。其中，功能色承载了用户对于结果的感知，其中：</p>
-            <p>
-                1. Info 用以表达
-                <Text type="info">提醒</Text>
-                、
-                <Text type="info">运行中</Text>
-                等信息，这些信息提示系统处于正常状态；
-            </p>
-            <p>
-                2. Error 用以表达
-                <Text type="error">错误</Text>
-                、
-                <Text type="error">失败</Text>
-                、
-                <Text type="error">阻塞</Text>
-                等信息，这些信息相对严重，并会阻碍用户下一步的行为；
-            </p>
-            <p>
-                3. Success 用以表达
-                <Text type="success">正确</Text>
-                、
-                <Text type="success">成功</Text>
-                等信息，肯定了用户的行为；
-            </p>
-            <p>
-                4. Warning 用以表达
-                <Text type="warning">警告</Text>
-                信息，需要用户关注，但不阻碍流程。
-            </p>
+            <p>1. Info 用以表达<Text type="info">提醒</Text>、<Text type="info">运行中</Text>等信息，这些信息提示系统处于正常状态；</p>
+            <p>2. Error 用以表达<Text type="error">错误</Text>、<Text type="error">失败</Text>、<Text type="error">阻塞</Text>等信息，这些信息相对严重，并会阻碍用户下一步的行为；</p>
+            <p>3. Success 用以表达<Text type="success">正确</Text>、<Text type="success">成功</Text>等信息，肯定了用户的行为；</p>
+            <p>4. Warning 用以表达<Text type="warning">警告</Text>信息，需要用户关注，但不阻碍流程。</p>
             <Grid repeat={4}>
                 <div>
                     <ColorItem name="colorInfoBg" color={token.colorInfoBg} />
@@ -199,16 +175,7 @@ export const ColorGrids = () => {
                 </div>
             </Grid>
             <Typography.Title level={3}>辅助色</Typography.Title>
-            <p>
-                辅助色并不包含确切的含义，而是用于分类一些实体。举例来说，同为动物，我们可以给
-                <StyledTag type="flat" color="cyan" icon="🐱">猫</StyledTag>
-                和
-                <StyledTag type="flat" color="light-purple" icon="🐶">狗</StyledTag>
-                分配两种辅助色，仅用于更好的区分两者，在用户使用一段时间后，就可以从辅助色来判断信息。
-                {'这部分内容将在 '}
-                <Code>7. Decoration 装饰</Code>
-                {' 中进行更详细的阐述。'}
-            </p>
+            <p>辅助色并不包含确切的含义，而是用于分类一些实体。举例来说，同为动物，我们可以给<StyledTag type="flat" color="cyan" icon="🐱">猫</StyledTag>和<StyledTag type="flat" color="light-purple" icon="🐶">狗</StyledTag>分配两种辅助色，仅用于更好的区分两者，在用户使用一段时间后，就可以从辅助色来判断信息。这部分内容将在 <Code>7. Decoration 装饰</Code> 中进行更详细的阐述。</p>
         </>
     );
 };
