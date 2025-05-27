@@ -2,7 +2,6 @@ import {
     GaussianBackground,
     GaussianBackgroundProps,
     GaussianBackgroundCircleConfig,
-    colors,
 } from '@panda-design/components';
 import {Typography} from 'antd';
 import {css, cx} from '@emotion/css';
@@ -108,10 +107,10 @@ export const GaussianBackgroundGrids = () => {
         <>
             <Typography.Title>Gaussian Background 呼吸背景 (Unstable)</Typography.Title>
             <Grid repeat={3}>
-                <StyledGaussianBackground style={{color: colors.black}} />
+                <StyledGaussianBackground style={{color: '#000'}} />
                 <StyledGaussianBackground
                     backgroundColor="#fff"
-                    style={{color: colors.black}}
+                    style={{color: '#000'}}
                     circles={circlesLightColorful}
                 />
                 <StyledGaussianBackground

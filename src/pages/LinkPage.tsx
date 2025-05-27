@@ -22,7 +22,10 @@ export const LinkPage = () => {
             </p>
             <p>进一步的，你可以使用 createLink 创建一个 Link 使用，并定义类型。</p>
             <p>当 url 是一个外部链接时，会自动的推断并标记。</p>
-            <p>更多配置请前往 <PackageLink>react-router-template-link</PackageLink></p>
+            <p>
+                {'更多配置请前往 '}
+                <PackageLink>react-router-template-link</PackageLink>
+            </p>
             <Typography.Title>超链接</Typography.Title>
             <Grid fitContent repeat={4}>
                 <ColumnTitle>默认 / 悬浮 / 点击</ColumnTitle>

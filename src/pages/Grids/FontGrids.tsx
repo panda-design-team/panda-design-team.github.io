@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import {Table, TableColumnsType, Typography} from 'antd';
 import styled from '@emotion/styled';
 import {ReactNode} from 'react';

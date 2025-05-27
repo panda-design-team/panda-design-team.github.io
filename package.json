@@ -7,7 +7,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "lint": "skr lint",
+    "lint": "eslint src",
     "lint-type": "tsc",
     "deploy": "yarn build && gh-pages -d dist"
   },
@@ -18,7 +18,7 @@
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@panda-design/components": "^0.5.0-alpha.4",
+    "@panda-design/components": "^0.5.7",
     "animejs": "^3.2.1",
     "antd": "^5.20.0",
     "lodash": "^4.17.21",
@@ -29,19 +29,20 @@
     "region-core": "^11.9.3"
   },
   "devDependencies": {
-    "@reskript/cli": "^6.2.1",
-    "@reskript/cli-lint": "^6.2.1",
-    "@reskript/config-lint": "^6.2.1",
+    "@eslint/js": "^9.27.0",
+    "@stylistic/eslint-plugin": "^4.4.0",
     "@types/animejs": "^3.1.5",
     "@types/lodash": "^4.17.0",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.57.0",
+    "eslint": "^9.27.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "gh-pages": "^6.1.1",
-    "stylelint": "^16.4.0",
     "typescript": "^5.4.5",
-    "vite": "^5.2.10"
+    "typescript-eslint": "^8.32.1",
+    "vite": "^6.3.5"
   },
   "repository": {
     "type": "git",

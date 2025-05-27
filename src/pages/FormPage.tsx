@@ -20,7 +20,11 @@ export const FormPage = () => {
             <p>3. 表单的项呈左右结构，表单控件的类型和宽度暗示了数据类型和数据长度</p>
             <p>4. 错落有致中的秩序</p>
             <br />
-            <p>表单域的特征，主要由 <Code>Form.Item</Code> 所规定的结构，加上对应的表单控件构成。</p>
+            <p>
+                {'表单域的特征，主要由 '}
+                <Code>Form.Item</Code>
+                {' 所规定的结构，加上对应的表单控件构成。'}
+            </p>
             <FormGrids />
             <VerticalGrids />
             {roleType === '组件库开发' && <CheckCardGrids />}

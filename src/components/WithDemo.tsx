@@ -43,7 +43,7 @@ export const WithDemo = ({children, demo}: ParagraphExtraProps) => {
                 layoutRef.current?.setAttribute('style', `height: ${ref.current.scrollHeight / 2 + 20}px`);
             }
         },
-        []
+        [],
     );
 
     return (

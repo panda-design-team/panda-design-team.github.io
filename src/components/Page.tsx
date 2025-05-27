@@ -58,7 +58,7 @@ const PageTitle = ({children: title, disableShadow}: PageTitleProps) => {
         () => {
             togglePageVisible(title);
         },
-        [title]
+        [title],
     );
     return (
         <PageTitleContainer disableShadow={disableShadow} onClick={toggle}>
