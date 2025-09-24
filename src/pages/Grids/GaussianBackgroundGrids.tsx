@@ -2,10 +2,10 @@ import {
     GaussianBackground,
     GaussianBackgroundProps,
     GaussianBackgroundCircleConfig,
-    colors,
 } from '@panda-design/components';
 import {Typography} from 'antd';
 import {css, cx} from '@emotion/css';
+import {colors} from '@/theme/colors';
 import {Grid} from '@/components/Grid';
 
 const circlesLightColorful: GaussianBackgroundCircleConfig[] = [

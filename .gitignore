@@ -36,4 +36,3 @@ jsconfig.json
 
 # 脚本产出
 scripts/parse.json
-reskript.config.bundled_*.mjs
